@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>WDD231 Project</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityShops Network</title>
+  <meta name="description" content="Course Home Page for WDD231, demonstrating responsive, accessible, and best practices in web design.">
+  <meta name="author" content="Yesid Augusto Romero Ruiz">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Main JS files loaded with defer -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to WDD231</h1>
-    <p>This is a test page to check normalize.css is working.</p>
+  <header>
+    <img src="images/shop.svg" alt="Site Logo" width="40" height="40">
+    <span>CityShops Network</span>
+    <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+  </header>
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">Directory</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Welcome!</h1>
+    <section>
+      <h2>About Me</h2>
+      <div>
+        <p>
+      I am a junior developer with proven experience in building clean, responsive,
+      and accessible web applications using modern technologies. My technical stack includes
+      HTML5, CSS3 (including Tailwind CSS and Bootstrap), JavaScript (ES6+), React.js, Node.js,
+      Express.js, and both NoSQL (MongoDB) and SQL (PostgreSQL) databases.
+      I’m proficient in version control with Git and GitHub, API integration, agile principles,
+      and professional tools like Visual Studio Code and NPM/PNPM.
+    </p>
+    <p>
+      My passion lies in delivering seamless user experiences, solving real problems,
+      and learning continuously. I thrive in collaborative environments,
+      drawing on my experience in agile project development and hands-on teamwork.
+    </p>
+    <p>
+      Before entering tech, I built a successful career in sales leadership, communication,
+      and community service. My most meaningful last achievement “Project 50 - personal goal” helped me lose 25kg,
+      forming habits of discipline and resilience that now drive my approach
+      to coding and teamwork.
+    </p>
+    <p>
+      I seek remote opportunities as a Frontend or Full Stack Developer,
+      with teams that value innovation, learning, and collaboration.
+      With bilingual English–Spanish communication skills and a growth mindset,
+      I stand out for my proactive, accountable work style and positive leadership.
+    </p>
+      </div>
+    </section>
+    <section>
+      <h2>Student Photo</h2>
+      <div>
+        <img src="images/my-photo.jpg" alt="Student Photo" width="120" height="120">
+      </div>
+    </section>
+    <section>
+      <h2>Web and Computer Progamming Cerficate</h2>
+      <div class="course-filter">
+        <button id="all-btn">All</button>
+        <button id="cse-btn">CSE</button>
+        <button id="wdd-btn">WDD</button>
+        <!-- Filter buttons for courses, handled by JS -->
+      </div>
+      <div id="course-list">
+        <!-- Courses will be dynamically generated here via JS -->
+      </div>
+      <p id="total-credits">The total credits for the courses listed above is: <span id="credits-count"></span></p>
+    </section>
+  </main>
+  <footer>
+    <div class="social">
+      <a href="https://github.com/LordPuposky" target="_blank" aria-label="Github">
+        <img src="images/github.svg" alt="GitHub" width="22" height="22">
+      </a>
+      <a href="https://www.linkedin.com/in/yesid-romero-40a710248" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="22" height="22">
+      </a>
+      <a href="https://www.facebook.com/Yesid.Augusto.Romero.Ruiz" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.svg" alt="Facebook" width="22" height="22">
+      </a>
+      <a href="https://x.com/YesidAugustoRo2" target="_blank" aria-label="X">
+        <img src="images/twitter-x.svg" alt="X" width="22" height="22">
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> CityShops Network &ndash; Author: Yesid Augusto Romero Ruiz, Colombia</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
