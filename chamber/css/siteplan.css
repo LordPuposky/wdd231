@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 4px solid #D60035;
+  margin-bottom: 2rem;
+}
+
+header img {
+  margin-left: 1rem;
+}
+
+h1 {
+  color: #D60035;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.2rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.03);
+  padding: 1.5rem 2rem;
+  border-left: 8px solid #D60035;
+}
+
+section h2 {
+  color: #D60035;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+ul, ol {
+  margin: 1rem 0 0 2rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #D60035;
+}
+
+/* Colores del ejemplo visual */
+section div[style*="display:flex"] {
+  margin-bottom: 1rem;
+}
+
+/* Wireframe images */
+section img {
+  margin-top: 1rem;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  body, section {
+    padding: 0.4rem;
+  }
+  header {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+  section {
+    border-left-width: 5px;
+    padding: 1rem 1rem;
+  }
+}

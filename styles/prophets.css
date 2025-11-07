@@ -1,0 +1,67 @@
+/* Main grid styling for the cards container */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Individual card style */
+#cards section {
+  background: #e7e2f6;
+  border: 2px solid #9690b6;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(90, 80, 120, 0.07);
+  padding: 1.5rem 1rem;
+  max-width: 320px;
+  text-align: center;
+}
+
+/* Headings for prophet names */
+#cards h2 {
+  font-family: 'Merriweather', serif;
+  color: #524892;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+/* Info text */
+#cards p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+/* Prophet image style */
+#cards img {
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 8px;
+  border: 2px solid #d3c7eb;
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+  background: #fff;
+}
+
+/* Responsive heading and background */
+header h1 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #524892;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+body {
+  background: #f6f3fa;
+  margin: 0;
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+}
+
+footer {
+  text-align: center;
+  color: #6a659a;
+  font-size: 0.95rem;
+  padding: 1rem 0 2rem 0;
+}
