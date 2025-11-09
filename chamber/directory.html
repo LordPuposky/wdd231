@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Directory | Bogotá Chamber of Commerce</title>
+    <meta name="description" content="Business directory listing all member companies of Bogotá Chamber of Commerce.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/siteplan.css">
+    <link rel="stylesheet" href="css/chamber.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Chamber logo" style="height:100px; margin-right:2rem;">
+        <nav>
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html" class="active">Business Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Business Directory</h1>
+
+        <section class="directory-intro">
+        <h2>Directory Introduction</h2>
+        <p>
+            In our directory you will find member companies from different industries in Bogotá. 
+            Use the view toggle to see the profiles as cards (grid) or as a detailed list.
+        </p>
+        </section>
+
+        <section class="directory-content">
+        <h2>Member Directory</h2>
+        <div class="view-toggle" style="margin-bottom: 2rem;">
+            <button id="grid-view-btn" aria-label="Grid View">🔳</button>
+            <button id="list-view-btn" aria-label="List View">📋</button>
+        </div>
+        <div id="members-container">
+            <!-- JS will inject grid or list here -->
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+        Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
+        </p>
+    </footer>
+    <script>
+        // Footer last modification date
+        document.getElementById('lastmod').textContent = document.lastModified;
+
+        // Member directory logic with big, horizontal logos
+        const membersContainer = document.getElementById('members-container');
+        const gridBtn = document.getElementById('grid-view-btn');
+        const listBtn = document.getElementById('list-view-btn');
+        let membersData = [];
+        let currentView = 'grid';
+
+        async function fetchMembers() {
+        try {
+            const response = await fetch('data/members.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            membersData = await response.json();
+            displayMembers(currentView);
+        } catch (error) {
+            membersContainer.innerHTML = '<p>Error loading members data.</p>';
+            console.error('Error fetching members:', error);
+        }
+        }
+
+        function displayMembers(view) {
+        if (view === 'grid') {
+            // Horizontal alignment, big logo, company info right
+            membersContainer.innerHTML = `
+            <div class="members-grid">
+                ${membersData.map(member => `
+                <div class="member-card" style="display:flex;align-items:center;gap:1.7rem;padding:1.5rem 1rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(214,0,53,0.09);margin-bottom: 1.4rem;">
+                    <img src="${member.logo}"
+                        alt="${member.name} logo"
+                        style="height:90px;max-width:130px;min-width:80px;object-fit:contain;flex-shrink:0;margin-right:1rem;">
+                    <div style="flex:1;">
+                    <h3 style="margin:0 0 0.6rem 0;color:#D60035;">${member.name}</h3>
+                    <p style="margin:0 0 0.4rem 0;">${member.address}</p>
+                    <p style="margin:0 0 0.4rem 0;">${member.phone}</p>
+                    <a href="${member.website}" target="_blank">${member.website}</a>
+                    <span class="membership-level">Gold</span>
+>
+                    </div>
+                </div>
+                `).join('')}
+            </div>
+            `;
+        } else {
+            // Table list view
+            membersContainer.innerHTML = `
+            <table class="members-list">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                    <th>Membership</th>
+                </tr>
+                </thead>
+                <tbody>
+                ${membersData.map((member, i) => `
+                    <tr class="${i % 2 === 0 ? 'even' : 'odd'}">
+                    <td>${member.name}</td>
+                    <td>${member.address}</td>
+                    <td>${member.phone}</td>
+                    <td><a href="${member.website}" target="_blank">${member.website}</a></td>
+                    <td>${member.membership_level}</td>
+                    </tr>
+                `).join('')}
+                </tbody>
+            </table>
+            `;
+        }
+        }
+
+        gridBtn.addEventListener('click', () => {
+        currentView = 'grid';
+        displayMembers(currentView);
+        gridBtn.classList.add('active');
+        listBtn.classList.remove('active');
+        });
+
+        listBtn.addEventListener('click', () => {
+        currentView = 'list';
+        displayMembers(currentView);
+        listBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+        });
+
+        fetchMembers();
+    </script>
+    </body>
+</html>

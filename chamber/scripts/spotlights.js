@@ -22,8 +22,8 @@ function showMemberModal(member) {
   const modal = document.getElementById('memberModal');
   const content = document.getElementById('modalContent');
   // Determina la clase con base en el membership
-  const membershipClass = member.membership_level 
-    ? member.membership_level.toLowerCase() 
+  const membershipClass = member.membership_level
+    ? member.membership_level.toLowerCase()
     : 'bronze';
 
   content.innerHTML = `

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Discover Bogotá | Bogotá Chamber of Commerce</title>
@@ -8,9 +9,10 @@
   <link rel="stylesheet" href="css/siteplan.css">
   <link rel="stylesheet" href="css/chamber.css">
 </head>
+
 <body>
   <header>
-    <img src="images/logo.png" alt="Chamber logo" style="height:100px; margin-right:2rem;">
+    <img src="images/logo.webp" alt="Chamber logo" style="height:100px; margin-right:2rem;">
     <nav>
       <ul class="main-nav">
         <li><a href="index.html">Home</a></li>
@@ -25,36 +27,36 @@
   </header>
   <main>
     <h1>Discover Bogotá</h1>
-
     <section class="discover-intro">
+      <h2>Welcome</h2>
       <p>
-        Bogotá is Colombia’s lively capital, full of culture, history, and diversity. Here you can discover some fun facts, impressive numbers, and must-see places!
+        Bogotá is Colombia’s lively capital, full of culture, history, and diversity. Here you can discover some fun
+        facts, impressive numbers, and must-see places!
       </p>
     </section>
-
     <section class="discover-facts">
       <h2>Interesting Facts</h2>
       <ul>
-        <li>Bogotá is located at 2,640 meters (8,660 feet) above sea level, making it one of the highest capitals in the world.</li>
+        <li>Bogotá is located at 2,640 meters (8,660 feet) above sea level, making it one of the highest capitals in the
+          world.</li>
         <li>The city was founded on August 6, 1538, by Gonzalo Jiménez de Quesada.</li>
         <li>Bogotá has over 7.5 million inhabitants, making it the largest city in Colombia.</li>
         <li>The city boasts more than 400 km of bike paths, the largest cycle route network in Latin America.</li>
-        <li>La Candelaria historic district is famous for its cobblestone streets, colorful buildings, and lively street art.</li>
+        <li>La Candelaria historic district is famous for its cobblestone streets, colorful buildings, and lively street
+          art.</li>
         <li>Bogotá’s Gold Museum has more than 55,000 pieces of gold from the pre-Columbian era.</li>
-        <li>Each Sunday and public holiday, Bogotá's “Ciclovía” closes main roads to cars and opens them to bikes and pedestrians.</li>
+        <li>Each Sunday and public holiday, Bogotá's “Ciclovía” closes main roads to cars and opens them to bikes and
+          pedestrians.</li>
       </ul>
     </section>
-
     <section class="discover-gallery">
-  <h2>Gallery</h2>
-  <div class="carousel-container">
-    <button class="carousel-btn left" id="prevBtn">&#8592;</button>
-    <div class="carousel-photo" id="carouselPhoto" tabindex="0"></div>
-    <button class="carousel-btn right" id="nextBtn">&#8594;</button>
-  </div>
-</section>
-
-
+      <h2>Gallery</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" id="prevBtn">&#8592;</button>
+        <div class="carousel-photo" id="carouselPhoto" tabindex="0"></div>
+        <button class="carousel-btn right" id="nextBtn">&#8594;</button>
+      </div>
+    </section>
     <section class="discover-info">
       <h2>Geography & More</h2>
       <ul>
@@ -71,92 +73,89 @@
       Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
     </p>
   </footer>
-
   <div id="photoModal" class="modal" style="display:none;">
     <div class="modal-content" id="photoModalContent"></div>
   </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('lastmod').textContent = document.lastModified;
     });
-    
-const photos = [
-  {
-    src: 'images/bogota-montserrate.jpg',
-    alt: 'View from Monserrate, Bogotá',
-    title: 'Monserrate',
-    caption: 'Monserrate is one of Bogotá\'s most iconic hills, offering panoramic views of the city and a pilgrimage site since colonial times.'
-  },
-  {
-    src: 'images/bogota-goldmuseum.jpg',
-    alt: 'Pre-Columbian Gold Museum',
-    title: 'Museo del Oro',
-    caption: 'The Gold Museum houses a world-renowned collection of pre-Columbian gold artifacts and is symbol of Colombia\'s ancestral culture.'
-  },
-  {
-    src: 'images/bogota-candelaria.jpg',
-    alt: 'La Candelaria colorful district',
-    title: 'La Candelaria',
-    caption: 'Historic center known for its colonial buildings, street art, museums, and lively cafés—heart of Bogotá\'s cultural life.'
-  },
-  {
-    src: 'images/bogota-ciclovia.jpg',
-    alt: 'Ciclovía bikes on main avenue',
-    title: 'Ciclovía',
-    caption: 'Every Sunday and holiday major roads are reserved for thousands of cyclists and pedestrians—an emblem of Bogotá’s active lifestyle.'
-  },
-  {
-    src: 'images/bogota-parks.jpg',
-    alt: 'Public parks in Bogotá',
-    title: 'Parks and Green Zones',
-    caption: 'Bogotá is dotted with beautiful public parks and green spaces, perfect for socializing, sports, and family activities.'
-  },
-  {
-    src: 'images/bogota-events.jpg',
-    alt: 'Street events and markets',
-    title: 'Cultural Events & Markets',
-    caption: 'From big events to street markets, Bogotá is always buzzing with culture, music, food, and uplifting communal spirit.'
-  }
-];
+    const photos = [
+      {
+        src: 'images/bogota-montserrate.jpg',
+        alt: 'View from Monserrate, Bogotá',
+        title: 'Monserrate',
+        caption: 'Monserrate is one of Bogotá\'s most iconic hills, offering panoramic views of the city and a pilgrimage site since colonial times.'
+      },
+      {
+        src: 'images/bogota-goldmuseum.jpg',
+        alt: 'Pre-Columbian Gold Museum',
+        title: 'Museo del Oro',
+        caption: 'The Gold Museum houses a world-renowned collection of pre-Columbian gold artifacts and is symbol of Colombia\'s ancestral culture.'
+      },
+      {
+        src: 'images/bogota-candelaria.jpg',
+        alt: 'La Candelaria colorful district',
+        title: 'La Candelaria',
+        caption: 'Historic center known for its colonial buildings, street art, museums, and lively cafés—heart of Bogotá\'s cultural life.'
+      },
+      {
+        src: 'images/bogota-ciclovia.jpg',
+        alt: 'Ciclovía bikes on main avenue',
+        title: 'Ciclovía',
+        caption: 'Every Sunday and holiday major roads are reserved for thousands of cyclists and pedestrians—an emblem of Bogotá’s active lifestyle.'
+      },
+      {
+        src: 'images/bogota-parks.jpg',
+        alt: 'Public parks in Bogotá',
+        title: 'Parks and Green Zones',
+        caption: 'Bogotá is dotted with beautiful public parks and green spaces, perfect for socializing, sports, and family activities.'
+      },
+      {
+        src: 'images/bogota-events.jpg',
+        alt: 'Street events and markets',
+        title: 'Cultural Events & Markets',
+        caption: 'From big events to street markets, Bogotá is always buzzing with culture, music, food, and uplifting communal spirit.'
+      }
+    ];
 
-let currentIdx = 0;
+    let currentIdx = 0;
 
-function renderCarouselPhoto(idx) {
-  const photoDiv = document.getElementById('carouselPhoto');
-  const photo = photos[idx];
-  photoDiv.innerHTML = `<img src="${photo.src}" alt="${photo.alt}" title="${photo.title}" style="max-width:340px; border-radius:13px; cursor:pointer;">`;
-  photoDiv.onclick = () => showPhotoModal(idx);
-}
-renderCarouselPhoto(currentIdx);
+    function renderCarouselPhoto(idx) {
+      const photoDiv = document.getElementById('carouselPhoto');
+      const photo = photos[idx];
+      photoDiv.innerHTML = `<img src="${photo.src}" alt="${photo.alt}" title="${photo.title}" style="max-width:340px; border-radius:13px; cursor:pointer;">`;
+      photoDiv.onclick = () => showPhotoModal(idx);
+    }
+    renderCarouselPhoto(currentIdx);
 
-document.getElementById('prevBtn').onclick = () => {
-  currentIdx = (currentIdx - 1 + photos.length) % photos.length;
-  renderCarouselPhoto(currentIdx);
-};
-document.getElementById('nextBtn').onclick = () => {
-  currentIdx = (currentIdx + 1) % photos.length;
-  renderCarouselPhoto(currentIdx);
-};
+    document.getElementById('prevBtn').onclick = () => {
+      currentIdx = (currentIdx - 1 + photos.length) % photos.length;
+      renderCarouselPhoto(currentIdx);
+    };
+    document.getElementById('nextBtn').onclick = () => {
+      currentIdx = (currentIdx + 1) % photos.length;
+      renderCarouselPhoto(currentIdx);
+    };
 
-function showPhotoModal(idx) {
-  const modal = document.getElementById('photoModal');
-  const content = document.getElementById('photoModalContent');
-  const photo = photos[idx];
-  content.innerHTML = `
+    function showPhotoModal(idx) {
+      const modal = document.getElementById('photoModal');
+      const content = document.getElementById('photoModalContent');
+      const photo = photos[idx];
+      content.innerHTML = `
     <span class="close" onclick="document.getElementById('photoModal').style.display='none';">&times;</span>
     <img src="${photo.src}" alt="${photo.alt}" style="max-width:340px; border-radius:12px; margin-bottom:1.1rem;">
     <h3 style="margin-bottom:0.4rem;">${photo.title}</h3>
     <p>${photo.caption}</p>
   `;
-  modal.style.display = 'flex';
-}
+      modal.style.display = 'flex';
+    }
 
-window.onclick = function(event) {
-  const modal = document.getElementById('photoModal');
-  if (event.target == modal) { modal.style.display = "none"; }
-};
-
+    window.onclick = function (event) {
+      const modal = document.getElementById('photoModal');
+      if (event.target == modal) { modal.style.display = "none"; }
+    };
   </script>
 </body>
+
 </html>

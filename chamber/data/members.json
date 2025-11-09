@@ -61,7 +61,7 @@
     "website": "https://www.segurossura.com.co",
     "registration_status": "Active",
     "membership_level": "Gold",
-    "logo": "images/logos/sura.png",
+    "logo": "images/logos/sura.webp",
     "tagline": "Tu tranquilidad es nuestra prioridad."
   },
   {
@@ -74,7 +74,7 @@
     "website": "https://www.alpina.com",
     "registration_status": "Active",
     "membership_level": "Silver",
-    "logo": "images/logos/alpina.jpg",
+    "logo": "images/logos/alpina.webp",
     "tagline": "Nutrición para todos los días."
   },
   {
@@ -87,7 +87,7 @@
     "website": "https://www.postobon.com.co",
     "registration_status": "Active",
     "membership_level": "bronze",
-    "logo": "images/logos/postobon.jpg",
+    "logo": "images/logos/postobon.webp",
     "tagline": "Refresca tu vida."
   },
   {
@@ -100,7 +100,7 @@
     "website": "https://www.tecnoquimicas.com",
     "registration_status": "Active",
     "membership_level": "bronze",
-    "logo": "images/logos/tecnoquimicas.png",
+    "logo": "images/logos/tecnoquimicas.webp",
     "tagline": "Salud para Colombia."
   },
   {
