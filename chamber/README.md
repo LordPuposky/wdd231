@@ -1,75 +1,84 @@
-Bogotá Chamber of Commerce Directory — WDD231
-Description
-This project implements the Bogotá Chamber of Commerce website for the WDD231 course, including:
+**Bogotá Chamber of Commerce Directory**
 
-Main page (index.html)
+Project for WDD231
 
-Discover page (discover.html)
+This project implements a responsive and accessible website simulating the Bogotá Chamber of Commerce. It includes a main landing page, community information pages, and an interactive business directory with grid and list display options.
 
-Business directory with grid and list views (directory.html)
+✨ **Key Features**
 
-Additional pages: Join, Events, Podcast, About Us
+* Fully responsive layout without frameworks (mobile, tablet, desktop)
 
-Folder Structure
+* Optimized WebP images for fast loading
 
-/css             → Stylesheets (chamber.css, siteplan.css)
-/images          → Logos, banners, optimized photos (WebP)
-/js              → Custom scripts (spotlights.js, weather.js, etc.)
-/data            → members.json with business data
-index.html
-discover.html
-directory.html
-join.html
-events.html
-podcast.html
-about.html
-README.md
+* Dynamic Business Directory:
 
-Quality and Validation Criteria
-HTML validated with validator.w3.org for all files. No errors and only minor warnings.
+* Member data loaded from members.json using fetch + async/await
 
-AA contrast validated on all pages (Chrome DevTools CSS Overview).
+* Toggle between Grid and List view
 
-Lighthouse scores:
+* High–resolution logos in Grid mode
 
-Desktop: 99-100
+* Accessibility and code quality verified:
 
-Mobile: 95+
+* No HTML errors (validator.w3.org)
 
-Responsive design: No horizontal scroll, correct navigation on all devices.
+* AA color contrast verified (Chrome DevTools → CSS Overview)
 
-Images compressed and optimized in WebP format.
+* Lighthouse Scores:
 
-Footer with name, course, and dynamic last modification date.
+    Desktop: 99–100
 
-Directory functionality:
+    Mobile: 95+
 
-Async data loading (fetch & async/await)
+* Footer includes student name, course reference, and dynamic last modified date
 
-Grid and list view, with large logos in grid cards.
+📂 **Project Structure**
+/
+├── css/
+│   ├── chamber.css
+│   └── siteplan.css
+├── images/
+│   └── (Optimized logos and banners in WebP)
+├── js/
+│   ├── spotlights.js
+│   ├── weather.js
+├── data/
+│   └── members.json
+├── index.html
+├── discover.html
+├── directory.html
+├── join.html
+├── events.html
+├── podcast.html
+├── about.html
+└── README.md
 
-How to Run
+🧭 **Pages Overview**
 
-Clone or download the repository.
+Page	Purpose
 
-Open index.html in your browser.
+    index.html	Main homepage
+    discover.html	Community and visitor information
+    directory.html	Business directory with dynamic views
+    join.html	Membership application form
+    events.html	Upcoming events
+    podcast.html	Recommendations and listening resources
+    about.html	Organization background
 
-Navigate the site using the main menu.
+🚀 **How to Run**
 
-Try the directory, switch between grid/list, and explore member data.
+1. Clone or download this repository.
 
-Validation Evidence
+2. Open index.html in any browser.
 
-Screenshots included of:
+3. Use the navigation menu to explore.
 
-HTML validations.
+4. Visit directory.html and try switching between Grid and List views.
 
-Lighthouse reports (desktop/mobile).
+✅ **Validation Evidence**
 
-CSS Overview (AA contrast).
+📝 **Notes**
 
-Notes
+No frameworks or external libraries required.
 
-The project is designed to run without frameworks: fast loading, high accessibility.
-
-Keep the members.json file in /data for directory data reference.
+Keep the members.json file inside /data to ensure directory data loads correctly.
