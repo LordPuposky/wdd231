@@ -4,7 +4,22 @@ async function getMembers() {
   return await response.json();
 }
 
-// Render logos as a grid (NO badges en los logos, solo grid visual)
+// Pick 2 or 3 random Gold or Silver members for the spotlight
+function pickSpotlightMembers(members) {
+  // Filter only Gold or Silver members
+  const validMembers = members.filter(
+    m => m.membership_level === 'Gold' || m.membership_level === 'Silver'
+  );
+  // Shuffle the array (Fisher-Yates algorithm)
+  for (let i = validMembers.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [validMembers[i], validMembers[j]] = [validMembers[j], validMembers[i]];
+  }
+  // Return up to 3 random members (but at least 2)
+  return validMembers.slice(0, Math.min(3, validMembers.length));
+}
+
+// Render the logo grid with the selected spotlight members
 function renderLogoGrid(members) {
   const logoGrid = document.getElementById('spotlight-logos');
   logoGrid.innerHTML = '';
@@ -17,11 +32,10 @@ function renderLogoGrid(members) {
   });
 }
 
-// Show modal with colored background according to membership
+// Show info modal for a chamber member (with membership coloring)
 function showMemberModal(member) {
   const modal = document.getElementById('memberModal');
   const content = document.getElementById('modalContent');
-  // Determina la clase con base en el membership
   const membershipClass = member.membership_level
     ? member.membership_level.toLowerCase()
     : 'bronze';
@@ -44,7 +58,7 @@ function showMemberModal(member) {
   modal.style.display = 'flex';
 }
 
-// Hide modal when clicking outside the content
+// Hide modal when clicking outside the modal content area
 window.onclick = function(event) {
   const modal = document.getElementById('memberModal');
   if (event.target == modal) {
@@ -52,8 +66,9 @@ window.onclick = function(event) {
   }
 }
 
-// Main
+// Main: get members, pick spotlights, and render on page load
 document.addEventListener("DOMContentLoaded", async () => {
   const members = await getMembers();
-  renderLogoGrid(members);
+  const spotlights = pickSpotlightMembers(members);
+  renderLogoGrid(spotlights);
 });
