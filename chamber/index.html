@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Welcome to the Bogotá Chamber of Commerce, supporting local business and community in Bogotá.">
+  <meta name="description" content="Welcome to the Bogotá Chamber of Commerce, supporting local business and community in Bogotá.">
   <meta name="author" content="Yesid Augusto Romero Ruiz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bogotá Chamber of Commerce</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet">
+  <!-- Google Fonts API with preconnect links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.png" type="image/png">
+  <!-- Open Graph tags -->
   <meta property="og:title" content="Bogotá Chamber of Commerce">
-  <meta property="og:description"
-    content="Boost your business, connect with others, and discover opportunities at the Bogotá Chamber of Commerce.">
-  <meta property="og:image" content="images/share-img.png">
-  <meta property="og:url" content="https://https://github.com/LordPuposky/wdd231/chamber/">
+  <meta property="og:description" content="Boost your business, connect with others, and discover opportunities at the Bogotá Chamber of Commerce.">
+  <meta property="og:image" content="https://lordpuposky.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://lordpuposky.github.io/wdd231/chamber/">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/siteplan.css">
-  <link rel="stylesheet" href="css/chamber.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/siteplan.css">
+  <link rel="stylesheet" href="styles/chamber.css">
 </head>
-
 <body>
   <header>
-    <img src="images/logo.webp" alt="Chamber logo" style="height:120px; margin-right:2rem;">
+    <img src="images/logo.webp" alt="Chamber logo" class="logo-header">
     <nav>
       <ul class="main-nav">
         <li><a href="index.html" class="active">Home</a></li>
@@ -36,8 +36,8 @@
       </ul>
     </nav>
   </header>
-
   <main>
+    <h1>Business Directory</h1>
     <section class="hero">
       <img src="images/hero-bogota.webp" alt="Bogotá city view with businesses" class="hero-img">
       <div class="hero-info">
@@ -46,7 +46,6 @@
         <a href="join.html" class="cta-button">Join the Chamber Now</a>
       </div>
     </section>
-
     <section class="current-events">
       <h2>Current Events</h2>
       <ul>
@@ -54,8 +53,6 @@
         <li><strong>Networking Night:</strong> Meet Local Entrepreneurs - Nov 30, 2025</li>
       </ul>
     </section>
-
-    
     <section class="weather" id="weather">
       <h2>Weather in Bogotá</h2>
       <div class="weather-today">
@@ -68,29 +65,23 @@
         <div id="forecast-day3"></div>
       </div>
     </section>
-
     <!-- Spotlight Members -->
     <section class="spotlights">
       <h2>Featured Chamber Members</h2>
       <div id="spotlight-logos" class="spotlight-logos"></div>
     </section>
-
     <!-- Modal -->
     <div id="memberModal" class="modal" style="display:none;">
       <div class="modal-content" id="modalContent"></div>
     </div>
-
   </main>
   <footer>
     <p>
       Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
     </p>
   </footer>
+  <script src="scripts/main.js"></script>
   <script src="scripts/weather.js"></script>
   <script src="scripts/spotlights.js"></script>
-  <script>
-    document.getElementById('lastmod').textContent = document.lastModified;
-  </script>
 </body>
-
 </html>
