@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Loader Transition (on Hover)</title>
+    <!--
+        This example uses CSS transition to animate the loader only when the user hovers over it.
+        No automatic looping occurs; the effect is triggered by mouse interaction.
+    -->
+    <style>
+        /* Loader element styles and transition definition */
+        .loader-t {
+        margin: 2rem;
+        width: 50px;
+        height: 50px;
+        border: 5px solid transparent;
+        border-color: #999 transparent #999 transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+        position: relative;
+        transition: transform 1.5s linear;
+        }
+
+        /* Loader emoji styles and hidden by default (scale 0), transition defined */
+        .loader-t::after {
+        content: '⚙️';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 1.5s ease-in-out;
+        font-size: 2rem;
+        }
+
+        /* Loader rotates on hover */
+        .loader-t:hover {
+        transform: rotate(360deg);
+        }
+
+        /* Loader emoji scales up on hover */
+        .loader-t:hover::after {
+        transform: translate(-50%, -50%) scale(1.5);
+        }
+    </style>
+    </head>
+    <body>
+    <!-- Loader element for transition example -->
+    <div class="loader-t"></div>
+</body>
+</html>
