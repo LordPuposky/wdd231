@@ -6,10 +6,8 @@ const courses = [
         title: 'Introduction to Programming',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
+        description: 'This course introduces students to programming. It covers variables, decisions, calculations, loops, arrays, and input/output for problem solving.',
+        technology: ['Python'],
         completed: true
     },
     {
@@ -18,11 +16,8 @@ const courses = [
         title: 'Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
+        description: 'An introduction to the World Wide Web and careers in website design/development. Students participate in basic web design and programming.',
+        technology: ['HTML', 'CSS'],
         completed: true
     },
     {
@@ -31,10 +26,8 @@ const courses = [
         title: 'Programming with Functions',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
+        description: 'Students learn to research and call functions, write/debug/test their own functions, and handle errors. Projects cover various disciplines including business, science, and humanities.',
+        technology: ['Python'],
         completed: true
     },
     {
@@ -43,10 +36,8 @@ const courses = [
         title: 'Programming with Classes',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
+        description: 'An introduction to classes and objects, conceptual encapsulation, inheritance, and polymorphism.',
+        technology: ['C#'],
         completed: true
     },
     {
@@ -55,12 +46,8 @@ const courses = [
         title: 'Dynamic Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        description: 'Builds on web fundamentals and programming experience. Learn to create dynamic websites using JavaScript for events, updating content, and responsive user experiences.',
+        technology: ['HTML', 'CSS', 'JavaScript'],
         completed: true
     },
     {
@@ -69,26 +56,21 @@ const courses = [
         title: 'Frontend Web Development I',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        description: 'Focuses on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        technology: ['HTML', 'CSS', 'JavaScript'],
         completed: false
     }
 ];
 
-// Example: Mark completed courses
-courses[1].completed = true; // WDD 130
-courses[4].completed = true; // WDD 131
-
+// DOM references
 const courseList = document.getElementById('course-list');
 const creditsCount = document.getElementById('credits-count');
 const allBtn = document.getElementById('all-btn');
 const cseBtn = document.getElementById('cse-btn');
 const wddBtn = document.getElementById('wdd-btn');
+const courseDetails = document.getElementById('course-details');
 
+// Render courses (filter: "ALL", "CSE", "WDD")
 function renderCourses(filter) {
     let filtered = courses;
     if (filter === "CSE") filtered = courses.filter(c => c.subject === "CSE");
@@ -104,19 +86,22 @@ function renderCourses(filter) {
             <div class="course-meta">Credits: ${course.credits} | Technology: ${course.technology.join(', ')}</div>
             <div class="course-desc">${course.description}</div>
             ${
-            course.completed
+                course.completed
                 ? `<span style="color:#3fb950; font-weight:bold;">✓ Completed</span>`
                 : `<span style="color:#e0a400; font-weight:bold;">⏳ In Progress</span>`
             }
         `;
+        // Add click event for modal
+        card.addEventListener('click', () => displayCourseDetails(course));
         courseList.appendChild(card);
-});
-  // Credits total for shown courses
+    });
+
+    // Credits total for shown courses
     const credits = filtered.reduce((sum, c) => sum + c.credits, 0);
     creditsCount.textContent = credits;
 }
 
-// Set active state for filter buttons
+// Set active class on filter buttons
 function setActive(btn) {
     allBtn.classList.remove('active');
     cseBtn.classList.remove('active');
@@ -124,11 +109,32 @@ function setActive(btn) {
     btn.classList.add('active');
 }
 
-// Initial render
+// Modal: show course details
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        <p><strong>Status</strong>: ${course.completed ? 'Completed' : 'In Progress'}</p>
+    `;
+    courseDetails.showModal();
+
+    document.getElementById('closeModal').onclick = () => courseDetails.close();
+
+    // Optional: close when clicking outside the modal
+    courseDetails.addEventListener('click', (e) => {
+        if (e.target === courseDetails) courseDetails.close();
+    });
+}
+
+// Initial render and filter events
 renderCourses("ALL");
 setActive(allBtn);
 
-// Filter events
 allBtn.addEventListener('click', () => {
     renderCourses("ALL");
     setActive(allBtn);
