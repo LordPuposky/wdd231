@@ -10,33 +10,143 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.webp" alt="Chamber logo" style="height:100px; margin-right:2rem;">
+        <img src="images/logo.webp" alt="Chamber logo" class="logo-header">
         <nav>
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Business Directory</a></li>
-            <li><a href="join.html" class="active" aria-current="page">Join</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="podcast.html">Podcast</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h1>Join the Chamber</h1>
-        <section class="page-intro">
-        <h2>Join the Chamber</h2>
-        <p>
-            Learn about the benefits of becoming a member of the Bogotá Chamber of Commerce. 
-            Membership provides networking, educational resources, events, and advocacy for local businesses.
-        </p>
-        <p><strong>Membership Application coming soon!</strong></p>
+        <section class="join-intro">
+            <h1>Join the Chamber</h1>
+            <p>Become a member of the Bogotá Chamber of Commerce! Enjoy networking, educational resources, exclusive events, and support for your business.</p>
         </section>
+        
+        <section class="membership-form-section">
+            <form method="get" action="thankyou.html" class="membership-form">
+                <label for="fname">First Name
+                    <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+                </label>
+                <label for="lname">Last Name
+                    <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+                </label>
+                <label for="title">Organization Title
+                    <input type="text" id="title" name="title" autocomplete="organization-title" 
+                        pattern="[A-Za-z\s\-]{7,}" placeholder="Manager, Director, etc." required>
+                </label>
+                <label for="email">Email
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+                </label>
+                <label for="phone">Mobile Phone
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                </label>
+                <label for="orgname">Organization Name
+                    <input type="text" id="orgname" name="orgname" autocomplete="organization" required>
+                </label>
+                <label for="level">Membership Level
+                    <select id="level" name="level" required>
+                        <option value="">Choose a level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label for="desc">Organization Description
+                    <textarea id="desc" name="desc"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Apply for Membership">
+            </form>
+        </section>
+
+        <!-- Tarjetas horizontalmente alineadas con el formulario -->
+        <section class="membership-levels">
+            <h2>Membership Levels</h2>
+            <div class="levels-row">
+                <div class="level-card level-np">
+                    <img src="images/np-icon.png" alt="Non Profit Icon">
+                    <h3>NP Membership</h3>
+                    <p>No fee. For non profit organizations.</p>
+                    <button type="button" class="level-info-btn" data-modal="modal-np">See NP Benefits</button>
+                </div>
+                <div class="level-card level-bronze">
+                    <img src="images/bronze-icon.png" alt="Bronze Icon">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic networking & event access.</p>
+                    <button type="button" class="level-info-btn" data-modal="modal-bronze">See Bronze Benefits</button>
+                </div>
+                <div class="level-card level-silver">
+                    <img src="images/silver-icon.png" alt="Silver Icon">
+                    <h3>Silver Membership</h3>
+                    <p>Extra training & spotlight ads.</p>
+                    <button type="button" class="level-info-btn" data-modal="modal-silver">See Silver Benefits</button>
+                </div>
+                <div class="level-card level-gold">
+                    <img src="images/gold-icon.png" alt="Gold Icon">
+                    <h3>Gold Membership</h3>
+                    <p>All benefits, max exposure, deep discounts.</p>
+                    <button type="button" class="level-info-btn" data-modal="modal-gold">See Gold Benefits</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MODALS -->
+        <div class="modal" id="modal-np">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>NP Membership Benefits</h3>
+                <ul>
+                    <li>Networking events</li>
+                    <li>Educational workshops</li>
+                    <li>Advocacy support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal" id="modal-bronze">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Bronze Benefits</h3>
+                <ul>
+                    <li>All NP benefits</li>
+                    <li>Business directory listing</li>
+                    <li>Event discounts</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal" id="modal-silver">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Silver Benefits</h3>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Homepage spotlight</li>
+                    <li>Exclusive training sessions</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal" id="modal-gold">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Gold Benefits</h3>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Maximum discounts and exposure</li>
+                    <li>Priority event access</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
         <p>
-        Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
+            Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
         </p>
     </footer>
     <script src="scripts/main.js"></script>
