@@ -772,5 +772,11 @@ nav .main-nav a:focus {
     to { opacity: 1; transform: translateY(0);}
 }
 
+.thankyou-section {
+  max-width: 540px;
+  margin: 2rem auto;
+}
+
+
 
 
