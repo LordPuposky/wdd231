@@ -80,7 +80,7 @@
   margin-top: 0.8rem;
 }
 
-.weather-forecast > div {
+.weather-forecast>div {
   background: linear-gradient(120deg, #fffbfd 70%, #ffe5ee 100%);
   border-radius: 15px;
   padding: 1.25rem 1rem 1rem 1rem;
@@ -94,7 +94,7 @@
   transition: box-shadow 0.18s, border 0.18s;
 }
 
-.weather-forecast > div:hover {
+.weather-forecast>div:hover {
   box-shadow: 0 8px 28px rgba(176, 0, 40, 0.17),
     0 3px 0px 0 #efb4c2 inset;
   border: 2.5px solid #f4aec1;
@@ -130,7 +130,7 @@
     gap: 10px;
   }
 
-  .weather-forecast > div {
+  .weather-forecast>div {
     min-width: 100%;
   }
 }
@@ -302,10 +302,14 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.39);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+}
+
+.modal[style*="display: block"] {
+  display: flex !important;
 }
 
 .modal-content {
@@ -519,12 +523,18 @@ nav .main-nav a:focus {
 
 /* === MEMBERSHIP FORM === */
 .membership-form {
-  max-width: 500px;
-  margin: 2rem auto;
+  max-width: 100%;
+  margin: 0;
   background: #f9f9fb;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
+}
+
+.membership-form-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .membership-form label {
@@ -553,11 +563,13 @@ nav .main-nav a:focus {
 
 /* === LEVEL CARDS === */
 .membership-levels {
-  margin: 2rem 0;
+  max-width: 600px;
+  margin: 2rem auto;
   text-align: center;
+  padding: 0 1rem;
 }
 
-.levels-container {
+.levels-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -620,9 +632,10 @@ nav .main-nav a:focus {
 
 /* === THANK YOU SECTION === */
 .join-intro {
-  max-width: 540px;
+  max-width: 600px;
   margin: 2rem auto;
   text-align: left;
+  padding: 0 1rem;
 }
 
 .success-graphic {
@@ -630,13 +643,24 @@ nav .main-nav a:focus {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  animation: bounce-in 0.8s cubic-bezier(.32,1.56,.74,1.18) 1;
+  animation: bounce-in 0.8s cubic-bezier(.32, 1.56, .74, 1.18) 1;
 }
 
 @keyframes bounce-in {
-  from { opacity: 0; transform: scale(0.6); }
-  60% { opacity: 1; transform: scale(1.08);}
-  to { opacity: 1; transform: scale(1);}
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .fade-in {
@@ -644,8 +668,15 @@ nav .main-nav a:focus {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .thankyou-section {
