@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Yesid Augusto Romero Ruiz">
     <title>Join the Chamber | Bogotá Chamber of Commerce</title>
     <meta name="description" content="Learn about benefits and apply to join the Bogotá Chamber of Commerce.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <meta property="og:title" content="Join the Chamber | Bogotá Chamber of Commerce">
-    <meta property="og:description" content="Learn about benefits and apply to join the Bogotá Chamber of Commerce. Networking, resources, events and more.">
+    <meta property="og:description"
+        content="Learn about benefits and apply to join the Bogotá Chamber of Commerce. Networking, resources, events and more.">
     <meta property="og:image" content="https://lordpuposky.github.io/wdd231/chamber/images/logo.webp">
     <meta property="og:url" content="https://lordpuposky.github.io/wdd231/chamber/join">
 </head>
@@ -44,27 +47,32 @@
             <h2>Membership Application</h2>
             <form method="get" action="thankyou.html" class="membership-form">
                 <label for="fname">First Name
-                    <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+                    <input type="text" id="fname" name="fname" autocomplete="given-name" required
+                        title="Enter your first name">
                 </label>
                 <label for="lname">Last Name
-                    <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+                    <input type="text" id="lname" name="lname" autocomplete="family-name" required
+                        title="Enter your last name">
                 </label>
                 <label for="title">Organization Title
                     <input type="text" id="title" name="title" autocomplete="organization-title"
-                        pattern="[A-Za-z\s\-]{7,}" placeholder="Manager, Director, etc." required>
+                        pattern="[A-Za-z\s\-]{7,}" placeholder="Manager, Director, etc." required
+                        title="Enter organization title">
                 </label>
                 <label for="email">Email
                     <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com"
-                        required>
+                        required title="Enter your email address">
                 </label>
                 <label for="phone">Mobile Phone
-                    <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                        title="Enter your mobile phone">
                 </label>
                 <label for="orgname">Organization Name
-                    <input type="text" id="orgname" name="orgname" autocomplete="organization" required>
+                    <input type="text" id="orgname" name="orgname" autocomplete="organization" required
+                        title="Enter your organization name">
                 </label>
                 <label for="level">Membership Level
-                    <select id="level" name="level" required>
+                    <select id="level" name="level" required title="Select your membership level">
                         <option value="">Choose a level</option>
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze Membership</option>
@@ -73,7 +81,7 @@
                     </select>
                 </label>
                 <label for="desc">Organization Description
-                    <textarea id="desc" name="desc"></textarea>
+                    <textarea id="desc" name="desc" title="Describe your organization"></textarea>
                 </label>
                 <input type="hidden" name="timestamp" id="timestamp">
                 <input type="submit" value="Apply for Membership">
