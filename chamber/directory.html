@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Directory | Bogotá Chamber of Commerce</title>
-    <meta name="description" content="Welcome to the Bogotá Chamber of Commerce, supporting local business and community in Bogotá.">
+    <meta name="description"
+        content="Welcome to the Bogotá Chamber of Commerce, supporting local business and community in Bogotá.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/directory.js" defer></script>>
 </head>
+
 <body>
     <header>
         <img src="images/logo.webp" alt="Chamber logo" style="height:100px; margin-right:2rem;">
         <nav>
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html" class="active" aria-current="page">Business Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="podcast.html">Podcast</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active" aria-current="page">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -28,30 +32,30 @@
         <h1>Business Directory</h1>
 
         <section class="directory-intro">
-        <h2>Directory Introduction</h2>
-        <p>
-            In our directory you will find member companies from different industries in Bogotá. 
-            Use the view toggle to see the profiles as cards (grid) or as a detailed list.
-        </p>
+            <h2>Directory Introduction</h2>
+            <p>
+                In our directory you will find member companies from different industries in Bogotá.
+                Use the view toggle to see the profiles as cards (grid) or as a detailed list.
+            </p>
         </section>
 
         <section class="directory-content">
-        <h2>Member Directory</h2>
-        <div class="view-toggle" style="margin-bottom: 2rem;">
-            <button id="grid-view-btn" aria-label="Grid View">🔳</button>
-            <button id="list-view-btn" aria-label="List View">📋</button>
-        </div>
-        <div id="members-container">
-            <!-- JS will inject grid or list here -->
-        </div>
+            <h2>Member Directory</h2>
+            <div class="view-toggle" style="margin-bottom: 2rem;">
+                <button id="grid-view-btn" aria-label="Grid View">🔳</button>
+                <button id="list-view-btn" aria-label="List View">📋</button>
+            </div>
+            <div id="members-container">
+                <!-- JS will inject grid or list here -->
+            </div>
         </section>
     </main>
 
     <footer>
         <p>
-        Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
+            Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
         </p>
     </footer>
-    <script src="scripts/directory.js" defer></script>>
-    </body>
+</body>
+
 </html>
