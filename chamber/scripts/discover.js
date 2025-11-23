@@ -3,37 +3,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     const photos = [
       {
-        src: 'images/bogota-montserrate.jpg',
+        src: 'images/bogota-montserrate.webp',
         alt: 'View from Monserrate, Bogotá',
         title: 'Monserrate',
         caption: 'Monserrate is one of Bogotá\'s most iconic hills, offering panoramic views of the city and a pilgrimage site since colonial times.'
       },
       {
-        src: 'images/bogota-goldmuseum.jpg',
+        src: 'images/bogota-goldmuseum.webp',
         alt: 'Pre-Columbian Gold Museum',
         title: 'Museo del Oro',
         caption: 'The Gold Museum houses a world-renowned collection of pre-Columbian gold artifacts and is symbol of Colombia\'s ancestral culture.'
       },
       {
-        src: 'images/bogota-candelaria.jpg',
+        src: 'images/bogota-candelaria.webp',
         alt: 'La Candelaria colorful district',
         title: 'La Candelaria',
         caption: 'Historic center known for its colonial buildings, street art, museums, and lively cafés—heart of Bogotá\'s cultural life.'
       },
       {
-        src: 'images/bogota-ciclovia.jpg',
+        src: 'images/bogota-ciclovia.webp',
         alt: 'Ciclovía bikes on main avenue',
         title: 'Ciclovía',
         caption: 'Every Sunday and holiday major roads are reserved for thousands of cyclists and pedestrians—an emblem of Bogotá’s active lifestyle.'
       },
       {
-        src: 'images/bogota-parks.jpg',
+        src: 'images/bogota-parks.webp',
         alt: 'Public parks in Bogotá',
         title: 'Parks and Green Zones',
         caption: 'Bogotá is dotted with beautiful public parks and green spaces, perfect for socializing, sports, and family activities.'
       },
       {
-        src: 'images/bogota-events.jpg',
+        src: 'images/bogota-events.webp',
         alt: 'Street events and markets',
         title: 'Cultural Events & Markets',
         caption: 'From big events to street markets, Bogotá is always buzzing with culture, music, food, and uplifting communal spirit.'

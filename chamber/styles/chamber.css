@@ -22,7 +22,7 @@
   margin-top: 1rem;
   padding: 0.7rem 2rem;
   font-weight: bold;
-  background: #d60028;
+  background: #b00028;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -192,7 +192,7 @@
 .spotlight-card:hover {
   transform: scale(1.05) translateY(-7px);
   box-shadow: 0 10px 28px 0 rgba(214, 0, 53, 0.14);
-  border-color: #D60028;
+  border-color: #b00028;
 }
 
 .spotlight-logo {
@@ -207,7 +207,7 @@
 }
 
 .spotlight-card h3 {
-  color: #D60028;
+  color: #b00028;
   font-size: 1.13rem;
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0 0 .44rem 0;
@@ -240,7 +240,7 @@
 }
 
 .spotlight-card a:hover {
-  color: #D60028;
+  color: #b00028;
   text-decoration: underline;
 }
 
@@ -324,7 +324,7 @@
   right: 16px;
   top: 14px;
   font-size: 1.8rem;
-  color: #D60028;
+  color: #b00028;
   cursor: pointer;
 }
 
@@ -442,7 +442,7 @@
 }
 
 .carousel-btn {
-  background: #D60028;
+  background: #b00028;
   color: #fff;
   font-size: 2.4rem;
   border: none;
@@ -457,7 +457,7 @@
 }
 
 .carousel-btn:hover {
-  background: #ad0e2b;
+  background: #b00028;
 }
 
 /* === NAVIGATION === */
@@ -467,7 +467,7 @@ header {
   justify-content: flex-start;
   padding: 1.2rem 2rem 1rem 2rem;
   background: #fff;
-  border-bottom: 4px solid #D60028;
+  border-bottom: 4px solid #b00028;
   margin-bottom: 2rem;
 }
 
@@ -553,7 +553,7 @@ nav .main-nav a:focus {
 }
 
 .membership-form input[type="submit"] {
-  background: #CC0033;
+  background: #b00028;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -593,7 +593,7 @@ nav .main-nav a:focus {
 }
 
 .level-np {
-  border-left: 5px solid #CC0033;
+  border-left: 5px solid #b00028;
 }
 
 .level-bronze {
@@ -617,7 +617,7 @@ nav .main-nav a:focus {
 .level-info-btn {
   margin-top: 1rem;
   color: #fff;
-  background: #CC0033;
+  background: #b00028;
   border: none;
   padding: 0.5rem 1.2rem;
   border-radius: 6px;
@@ -661,7 +661,7 @@ nav .main-nav a:focus {
   right: 20px;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #CC0033;
+  color: #b00028;
   cursor: pointer;
 }
 
@@ -694,7 +694,7 @@ nav .main-nav a:focus {
     opacity: 1;
     transform: translateY(0);
 }
-.level-np { border-left: 5px solid #CC0033;}
+.level-np { border-left: 5px solid #b00028;}
 .level-bronze { border-left: 5px solid #b08d57;}
 .level-silver { border-left: 5px solid #aaa;}
 .level-gold { border-left: 5px solid #FFD700;}
@@ -704,7 +704,7 @@ nav .main-nav a:focus {
 .level-info-btn {
     margin-top: 1rem;
     color: #fff;
-    background: #CC0033;
+    background: #b00028;
     border: none;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;

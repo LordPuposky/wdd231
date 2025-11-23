@@ -9,7 +9,7 @@
     "website": "https://www.bancolombia.com",
     "registration_status": "Active",
     "membership_level": "Gold",
-    "logo": "images/logos/bancolombia.png",
+    "logo": "images/logos/bancolombia.webp",
     "tagline": "Soluciones financieras para todos."
   },
   {
@@ -22,7 +22,7 @@
     "website": "https://www.exito.com",
     "registration_status": "Active",
     "membership_level": "Silver",
-    "logo": "images/logos/exito.jpg",
+    "logo": "images/logos/exito.webp",
     "tagline": "Todo lo que te gusta, cerca de ti."
   },
   {
@@ -35,7 +35,7 @@
     "website": "https://www.avianca.com",
     "registration_status": "Active",
     "membership_level": "Gold",
-    "logo": "images/logos/avianca.jpg",
+    "logo": "images/logos/avianca.webp",
     "tagline": "Vuela por Colombia y el mundo."
   },
   {
@@ -48,7 +48,7 @@
     "website": "https://www.gruponutresa.com",
     "registration_status": "Active",
     "membership_level": "Silver",
-    "logo": "images/logos/nutresa.jpg",
+    "logo": "images/logos/nutresa.webp",
     "tagline": "Sabores para la vida."
   },
   {
@@ -113,7 +113,7 @@
     "website": "https://www.arturocalle.com",
     "registration_status": "Active",
     "membership_level": "Silver",
-    "logo": "images/logos/arturocalle.jpg",
+    "logo": "images/logos/arturocalle.webp",
     "tagline": "Estilo colombiano."
   },
   {
@@ -126,7 +126,7 @@
     "website": "https://www.claro.com.co",
     "registration_status": "Active",
     "membership_level": "Gold",
-    "logo": "images/logos/claro.jpg",
+    "logo": "images/logos/claro.webp",
     "tagline": "La red que nos conecta."
   }
 ]

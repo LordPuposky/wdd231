@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Join the Chamber | Bogotá Chamber of Commerce</title>
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/chamber.css">
 </head>
+
 <body>
     <header>
-        <img src="images/logo.webp" alt="Chamber logo" class="logo-header">
+        <img src="images/logo.webp" alt="Chamber logo" class="logo-header" width="120" height="120">
         <nav>
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
@@ -26,10 +28,12 @@
     <main>
         <section class="join-intro">
             <h1>Join the Chamber</h1>
-            <p>Become a member of the Bogotá Chamber of Commerce! Enjoy networking, educational resources, exclusive events, and support for your business.</p>
+            <p>Become a member of the Bogotá Chamber of Commerce! Enjoy networking, educational resources, exclusive
+                events, and support for your business.</p>
         </section>
-        
+
         <section class="membership-form-section">
+            <h2>Membership Application</h2>
             <form method="get" action="thankyou.html" class="membership-form">
                 <label for="fname">First Name
                     <input type="text" id="fname" name="fname" autocomplete="given-name" required>
@@ -38,11 +42,12 @@
                     <input type="text" id="lname" name="lname" autocomplete="family-name" required>
                 </label>
                 <label for="title">Organization Title
-                    <input type="text" id="title" name="title" autocomplete="organization-title" 
+                    <input type="text" id="title" name="title" autocomplete="organization-title"
                         pattern="[A-Za-z\s\-]{7,}" placeholder="Manager, Director, etc." required>
                 </label>
                 <label for="email">Email
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com"
+                        required>
                 </label>
                 <label for="phone">Mobile Phone
                     <input type="tel" id="phone" name="phone" autocomplete="tel" required>
@@ -66,38 +71,36 @@
                 <input type="submit" value="Apply for Membership">
             </form>
         </section>
-
-        <!-- Tarjetas horizontalmente alineadas con el formulario -->
         <section class="membership-levels">
             <h2>Membership Levels</h2>
             <div class="levels-row">
                 <div class="level-card level-np">
-                    <img src="images/np-icon.png" alt="Non Profit Icon">
+                    <img src="images/np-icon.png" alt="Non Profit Icon" width="64" height="64" loading="lazy">
                     <h3>NP Membership</h3>
                     <p>No fee. For non profit organizations.</p>
                     <button type="button" class="level-info-btn" data-modal="modal-np">See NP Benefits</button>
                 </div>
                 <div class="level-card level-bronze">
-                    <img src="images/bronze-icon.png" alt="Bronze Icon">
+                    <img src="images/bronze-icon.webp" alt="Bronze Icon" width="64" height="64" loading="lazy">
                     <h3>Bronze Membership</h3>
                     <p>Basic networking & event access.</p>
                     <button type="button" class="level-info-btn" data-modal="modal-bronze">See Bronze Benefits</button>
                 </div>
                 <div class="level-card level-silver">
-                    <img src="images/silver-icon.png" alt="Silver Icon">
+                    <img src="images/silver-icon.png" alt="Silver Icon" width="64" height="64" loading="lazy">
                     <h3>Silver Membership</h3>
                     <p>Extra training & spotlight ads.</p>
                     <button type="button" class="level-info-btn" data-modal="modal-silver">See Silver Benefits</button>
                 </div>
                 <div class="level-card level-gold">
-                    <img src="images/gold-icon.png" alt="Gold Icon">
+                    <img src="images/gold-icon.png" alt="Gold Icon" width="64" height="64" loading="lazy">
                     <h3>Gold Membership</h3>
                     <p>All benefits, max exposure, deep discounts.</p>
                     <button type="button" class="level-info-btn" data-modal="modal-gold">See Gold Benefits</button>
                 </div>
             </div>
         </section>
-        
+
         <!-- MODALS -->
         <div class="modal" id="modal-np">
             <div class="modal-content">
@@ -151,4 +154,5 @@
     </footer>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
