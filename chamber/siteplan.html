@@ -5,19 +5,17 @@
   <meta charset="UTF-8">
   <meta name="author" content="Yesid Augusto Romero Ruiz">
   <meta name="description" content="Site plan for the Bogotá Chamber of Commerce project">
-  <meta name="author" content="Yesid Augusto Romero Ruiz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Plan - Join and Bogotá Chamber of Commerce</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/siteplan.css">
+  <link rel="stylesheet" href="styles/siteplan.css">
   <script src="scripts/main.js" defer></script>
 </head>
-
 <body>
   <header>
-    <img src="images/logo.png" alt="Chamber logo" style="height:60px; margin-right:2rem;">
+    <img src="images/logo.webp" alt="Chamber logo" class="header-logo">
     <h1>Bogotá Chamber of Commerce</h1>
   </header>
   <section>
@@ -47,21 +45,17 @@
 
   <section>
     <h2>Color Schema</h2>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-      <div
-        style="background:#b00028; color:#fff; width:120px; height:100px; display:flex; align-items:center; justify-content:center; border:1px solid #ccc; border-radius:8px;">
+    <div class="color-palette">
+      <div class="color-box color-primary">
         #D60035<br>Primary
       </div>
-      <div
-        style="background:#fff; color:#b00028; width:120px; height:100px; display:flex; align-items:center; justify-content:center; border:1px solid #ccc; border-radius:8px;">
+      <div class="color-box color-background">
         #FFFFFF<br>Background
       </div>
-      <div
-        style="background:#222; color:#fff; width:120px; height:100px; display:flex; align-items:center; justify-content:center; border:1px solid #ccc; border-radius:8px;">
+      <div class="color-box color-dark">
         #222<br>Titles/Footer
       </div>
-      <div
-        style="background:#1976d2; color:#fff; width:120px; height:100px; display:flex; align-items:center; justify-content:center; border:1px solid #ccc; border-radius:8px;">
+      <div class="color-box color-accent">
         #1976d2<br>Links/Icons
       </div>
     </div>
@@ -84,7 +78,7 @@
 
   <section>
     <h2>Site Map</h2>
-    <img src="images/sitemap.webp" alt="Site map diagram" style="max-width:350px;">
+    <img src="images/sitemap.webp" alt="Site map diagram" class="sitemap-img">
     <ul>
       <li>Home</li>
       <li>Business Directory</li>
@@ -101,11 +95,11 @@
     <div class="wireframe-demo">
       <div class="wf-desktop">
         <h4>Desktop Wireframe</h4>
-        <img src="images/ccb_desktop_detailed.png" alt="Desktop wireframe" style="max-width:350px;">
+        <img src="images/ccb_desktop_detailed.png" alt="Desktop wireframe" class="wireframe-img-desktop">
       </div>
-      <div class="wf-mobile" style="margin-top: 18px;">
+      <div class="wf-mobile">
         <h4>Mobile Wireframe</h4>
-        <img src="images/ccb_mobile_detailed.png" alt="Mobile wireframe" style="max-width:150px;">
+        <img src="images/ccb_mobile_detailed.png" alt="Mobile wireframe" class="wireframe-img-mobile">
       </div>
     </div>
   </section>
