@@ -679,7 +679,90 @@ nav .main-nav a:focus {
   }
 }
 
-.thankyou-section {
-  max-width: 540px;
-  margin: 2rem auto;
+/* === THANK YOU PAGE === */
+.thankyou-hero {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-left: 6px solid #b00028;
+}
+
+.thankyou-hero h2 {
+  color: #b00028;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.thankyou-hero p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.thankyou-details {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  border-left: 6px solid #b00028;
+}
+
+.thankyou-details h2 {
+  color: #b00028;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: #fff;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #333;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.info-value {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+.thankyou-details .cta-button {
+  display: block;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  max-width: 250px;
+}
+
+@media (max-width: 700px) {
+  .info-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  
+  .thankyou-hero h2 {
+    font-size: 2rem;
+  }
 }

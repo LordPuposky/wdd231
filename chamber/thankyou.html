@@ -6,14 +6,22 @@
     <title>Thank You | Bogotá Chamber of Commerce</title>
     <meta name="description" content="Thank you for joining the Bogotá Chamber of Commerce!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <script src="scripts/thankyou.js" defer></script>
+    <meta property="og:title" content="Thank You | Bogotá Chamber of Commerce">
+    <meta property="og:description" content="Thank you for joining the Bogotá Chamber of Commerce!">
+    <meta property="og:image" content="https://lordpuposky.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://lordpuposky.github.io/wdd231/chamber/thankyou">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.webp" alt="Chamber logo" class="logo-header" width="120" height="120">
+        <img src="images/logo.webp" alt="Chamber logo" class="logo-header">
         <nav>
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
@@ -27,29 +35,54 @@
         </nav>
     </header>
     <main>
-        <section class="thankyou-section" style="max-width:540px; margin:2rem auto;">
-            <h1>Thank You!</h1>
-            <p>Your membership application has been received. We appreciate your interest in joining the Bogotá Chamber
-                of Commerce.</p>
-            <div class="thankyou-details">
-                <h2>Submitted Information</h2>
-                <ul>
-                    <li><strong>First Name:</strong> <span id="show-fname"></span></li>
-                    <li><strong>Last Name:</strong> <span id="show-lname"></span></li>
-                    <li><strong>Email:</strong> <span id="show-email"></span></li>
-                    <li><strong>Mobile Phone:</strong> <span id="show-phone"></span></li>
-                    <li><strong>Organization Name:</strong> <span id="show-orgname"></span></li>
-                    <li><strong>Date Submitted:</strong> <span id="show-timestamp"></span></li>
-                </ul>
+        <h1>Business Directory</h1>
+        
+        <section class="thankyou-hero">
+            <div class="success-graphic fade-in">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="60" fill="#b00028"/>
+                    <path d="M35 60L52 77L85 43" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
-            <a href="index.html" class="cta-button" style="margin-top:2rem;">Back to Home</a>
+            <h2 class="fade-in">Thank You!</h2>
+            <p class="fade-in">Your membership application has been received. We appreciate your interest in joining the Bogotá Chamber of Commerce.</p>
+        </section>
+
+        <section class="thankyou-details fade-in">
+            <h2>Submitted Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">First Name:</span>
+                    <span class="info-value" id="show-fname">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Last Name:</span>
+                    <span class="info-value" id="show-lname">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value" id="show-email">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Mobile Phone:</span>
+                    <span class="info-value" id="show-phone">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Organization Name:</span>
+                    <span class="info-value" id="show-orgname">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Date Submitted:</span>
+                    <span class="info-value" id="show-timestamp">Loading...</span>
+                </div>
+            </div>
+            <a href="index.html" class="cta-button">Back to Home</a>
         </section>
     </main>
     <footer>
         <p>
-            Created by Yesid Augusto Romero Ruiz · WDD231 · Last modification: <span id="lastmod"></span>
+            Created by Yesid Augusto Romero Ruiz &middot; WDD231 &middot; Last modification: <span id="lastmod"></span>
         </p>
     </footer>
 </body>
-
 </html>
