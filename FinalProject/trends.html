@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Yesid Augusto Romero Ruiz" />
+    <meta name="description" content="Explore 15+ future digital banking trends dynamically loaded with JavaScript." />
+    <title>FutureBank Insights - Trends Explorer</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trends.html" class="active">Trends</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Digital Banking Trends Explorer</h1>
+            <p>Discover the financial innovations shaping the next five years.</p>
+        </section>
+
+        <section class="controls">
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+            </select>
+        </section>
+
+        <section id="trendsContainer" class="grid"></section>
+    </main>
+    <!-- Modal -->
+    <dialog id="trendModal">
+        <button id="closeModal">X</button>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <p><strong>Impact:</strong> <span id="modalImpact"></span></p>
+        <p><strong>Timeline:</strong> <span id="modalTimeline"></span></p>
+    </dialog>
+    <footer>
+        <p>&copy; <span id="year"></span> FutureBank Insights</p>
+        <a href="video-demo.html">Video Demo</a>
+    </footer>
+    <script type="module" src="scripts/trends.js"></script>
+</body>
+
+</html>

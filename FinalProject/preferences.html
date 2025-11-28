@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yesid Augusto Romero Ruiz">
+    <meta name="description" content="User preferences, resources, and contact form for FutureBank Insights">
+    <meta property="og:title" content="FutureBank Insights - User Preferences & Resources" />
+    <meta property="og:description" content="Set your preferences, explore fintech resources, and contact us." />
+    <meta property="og:type" content="website" />
+
+    <title>FutureBank Insights - User Preferences & Resources</title>
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">FutureBank Insights</div>
+        <nav>
+            <button id="menu-btn">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trends.html">Trends</a></li>
+                <li><a href="contact.html" class="active">Preferences & Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>User Preferences & Fintech Resources</h1>
+            <p>Customize your experience and explore curated learning materials about the future of digital banking.</p>
+        </section>
+        <!-- USER PREFERENCES SECTION -->
+        <section class="preferences">
+            <h2>Your Favorite Trends</h2>
+            <p>Select your preferred trends. Preferences are saved with localStorage.</p>
+            <ul id="favorites-list" class="favorites-list">
+                <!-- Filled dynamically with JS -->
+            </ul>
+        </section>
+        <!-- RESOURCES SECTION -->
+        <section class="resources">
+            <h2>Fintech Learning Resources</h2>
+            <ul>
+                <li><a href="https://www.finextra.com/" target="_blank">Finextra - Global Financial Technology News</a>
+                </li>
+                <li><a href="https://www.mckinsey.com/industries/financial-services" target="_blank">McKinsey -
+                        Financial Services Insights</a></li>
+                <li><a href="https://www.weforum.org/centre-for-financial-and-monetary-systems" target="_blank">World
+                        Economic Forum - Future of Financial Systems</a></li>
+                <li><a href="https://www.gov.uk/government/publications/open-banking" target="_blank">Open Banking
+                        Standards</a></li>
+            </ul>
+        </section>
+        <!-- CONTACT FORM -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Send feedback or subscribe to project updates.</p>
+            <form action="thanks.html" method="get">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to newsletter
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> FutureBank Insights | Created by Yesid Augusto Romero Ruiz</p>
+        <a href="video.html">Project Demo Video</a>
+        <a href="attributions.html">Attributions</a>
+    </footer>
+    <script type="module" src="scripts/contact.js"></script>
+</body>
+
+</html>
