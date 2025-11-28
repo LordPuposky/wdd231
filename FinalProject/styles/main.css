@@ -1,296 +1,117 @@
-/* ===============================
-GLOBAL RESET
-=============================== */
-* {
+/* ======================================
+BASE VARIABLES (COLORES DEL SITE PLAN)
+======================================= */
+:root {
+    --primary: #0043A4;
+    --dark: #0A0F1F;
+    --accent: #00C6A7;
+    --light: #ffffff;
+    --text-main: #111;
+    --border-soft: rgba(0, 0, 0, 0.15);
+}
+
+/* ======================================
+GLOBAL STYLES
+======================================= */
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(145deg, #0a2342, #12365a, #1d4e75, #2c6e91);
+    color: var(--text-main);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* ===============================
-COLOR VARIABLES (FutureBank Palette)
-=============================== */
-:root {
-    --primary: #0a2342;
-    /* azul oscuro */
-    --secondary: #2c6e91;
-    /* azul medio */
-    --accent1: #fafaff;
-    /* casi blanco */
-    --accent2: #3c9d93;
-    /* teal */
-    --accent3: #ff7f11;
-    /* naranja */
-    --text-main: #111827;
-    --text-muted: #6b7280;
-    --border-soft: #e5e7eb;
-}
-
-/* ===============================
-BASE
-=============================== */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-    line-height: 1.7;
-    background: radial-gradient(circle at top left, #2c6e91 0, #0a2342 35%, #020617 100%);
-    color: var(--text-main);
-}
-
-/* ===============================
-LAYOUT
-=============================== */
-main {
-    max-width: 960px;
-    margin: 40px auto 60px;
-    padding: 24px;
-    background: var(--accent1);
-    border-radius: 18px;
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
-}
-
-/* ===============================
-HEADER
-=============================== */
+/* HEADER */
 header {
-    background: linear-gradient(120deg, var(--primary), var(--secondary));
-    color: #ffffff;
+    background: linear-gradient(120deg, var(--dark), var(--primary));
+    padding: 40px 16px 32px;
     text-align: center;
-    padding: 32px 16px 24px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 header h1 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 2.3rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+    color: #E2ECFF !important;
 }
 
-header p {
-    font-size: 1rem;
-    opacity: 0.9;
+/* MAIN CONTAINER */
+main {
+    max-width: 980px;
+    margin: 48px auto 70px;
+    padding: 28px;
+    background: #ffffffee;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
 }
 
-/* ===============================
-SECTION STYLES
-=============================== */
+/* SECTIONS */
 section {
-    margin-bottom: 40px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 48px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-section:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-h2 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-bottom: 12px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 32px;
-    background: linear-gradient(90deg, var(--accent2), var(--accent3));
-    border-radius: 999px;
-}
-
+h1,
+h2,
 h3 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 1.1rem;
-    color: var(--secondary);
-    margin: 20px 0 8px;
-}
-
-p {
-    margin-bottom: 10px;
-    color: var(--text-main);
-}
-
-/* ===============================
-LISTS
-=============================== */
-ul {
-    list-style: none;
-    margin-left: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--primary);
 }
 
 ul li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 8px;
-    color: var(--text-main);
+    margin: 6px 0;
 }
 
-ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: radial-gradient(circle, var(--accent3) 0, var(--accent2) 60%);
-}
-
-/* ===============================
-LINKS
-=============================== */
-a {
-    color: var(--accent2);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    color: var(--accent3);
-    text-decoration: underline;
-}
-
-/* ===============================
-COLOR PALETTE SWATCHES
-=============================== */
-.color-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 14px;
-    margin: 12px 0 6px;
-}
-
-.color-item {
+/* COLOR PALETTE BOXES */
+.color-palette {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 12px;
-    border: 1px solid var(--border-soft);
-    background: #ffffff;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 20px 0;
 }
 
-.color-swatch {
-    width: 32px;
-    height: 32px;
-    border-radius: 999px;
-    border: 2px solid rgba(15, 23, 42, 0.08);
-}
-
-/* Especificar colores en los swatches */
-.color-swatch.primary {
-    background: var(--primary);
-}
-
-.color-swatch.secondary {
-    background: var(--secondary);
-}
-
-.color-swatch.accent1 {
-    background: var(--accent1);
-}
-
-.color-swatch.accent2 {
-    background: var(--accent2);
-}
-
-.color-swatch.accent3 {
-    background: var(--accent3);
-}
-
-/* ===============================
-TYPOGRAPHY SHOWCASE
-=============================== */
-.typography-sample {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
-    gap: 16px;
-    margin-top: 12px;
-}
-
-.typography-block {
-    padding: 14px 16px;
-    border-radius: 12px;
-    border: 1px dashed var(--border-soft);
-    background: #ffffff;
-}
-
-.typography-block h4 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--secondary);
-    margin-bottom: 8px;
-}
-
-.typography-block .heading-sample {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 1.3rem;
-    color: var(--primary);
-}
-
-.typography-block .body-sample {
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-}
-
-/* ===============================
-WIREFRAME IMAGES
-=============================== */
-section img {
-    max-width: 100%;
-    border-radius: 12px;
-    border: 1px solid var(--border-soft);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
-    margin-bottom: 12px;
-}
-
-/* ===============================
-FOOTER
-=============================== */
-footer {
-    max-width: 960px;
-    margin: 0 auto 32px;
+.color-box {
+    padding: 16px;
+    border-radius: 10px;
+    width: 180px;
     text-align: center;
-    color: #e5e7eb;
-    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid var(--border-soft);
 }
 
-footer p+p {
-    margin-top: 4px;
-    color: #cbd5f5;
+/* ======================================
+WIREFRAME IMAGES
+======================================= */
+.wireframe-section h3 {
+    margin-top: 28px;
+    font-size: 1.25rem;
 }
 
-/* ===============================
-RESPONSIVE
-=============================== */
-@media (max-width: 720px) {
-    main {
-        margin: 24px 12px 40px;
-        padding: 18px;
-        border-radius: 14px;
-    }
+.wireframe-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 14px;
+}
 
-    header h1 {
-        font-size: 1.8rem;
-    }
+section img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
-    .typography-sample {
-        grid-template-columns: 1fr;
-    }
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #fff;
+    background: var(--dark);
+    margin-top: 60px;
 }
