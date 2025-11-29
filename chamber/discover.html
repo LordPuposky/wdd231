@@ -9,12 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/siteplan.css">
   <link rel="stylesheet" href="styles/chamber.css">
-  <script src="scripts/discover.js" defer></script>
+  <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
   <header>
-    <img src="images/logo.webp" alt="Chamber logo" style="height:100px; margin-right:2rem;">
+    <img src="images/logo.webp" alt="Chamber logo" width="200" height="100" fetchpriority="high"
+      style="height:100px; margin-right:2rem; width:auto;">
     <nav>
       <ul class="main-nav">
         <li><a href="index.html">Home</a></li>
@@ -27,48 +28,49 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Discover Bogotá</h1>
-    <section class="discover-intro">
-      <h2>Welcome</h2>
-      <p>
-        Bogotá is Colombia’s lively capital, full of culture, history, and diversity. Here you can discover some fun
-        facts, impressive numbers, and must-see places!
-      </p>
-    </section>
-    <section class="discover-facts">
-      <h2>Interesting Facts</h2>
-      <ul>
-        <li>Bogotá is located at 2,640 meters (8,660 feet) above sea level, making it one of the highest capitals in the
-          world.</li>
-        <li>The city was founded on August 6, 1538, by Gonzalo Jiménez de Quesada.</li>
-        <li>Bogotá has over 7.5 million inhabitants, making it the largest city in Colombia.</li>
-        <li>The city boasts more than 400 km of bike paths, the largest cycle route network in Latin America.</li>
-        <li>La Candelaria historic district is famous for its cobblestone streets, colorful buildings, and lively street
-          art.</li>
-        <li>Bogotá’s Gold Museum has more than 55,000 pieces of gold from the pre-Columbian era.</li>
-        <li>Each Sunday and public holiday, Bogotá's “Ciclovía” closes main roads to cars and opens them to bikes and
-          pedestrians.</li>
-      </ul>
-    </section>
-    <section class="discover-gallery">
-      <h2>Gallery</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn left" id="prevBtn">&#8592;</button>
-        <div class="carousel-photo" id="carouselPhoto" tabindex="0"></div>
-        <button class="carousel-btn right" id="nextBtn">&#8594;</button>
-      </div>
-    </section>
-    <section class="discover-info">
-      <h2>Geography & More</h2>
-      <ul>
-        <li><strong>Altitude:</strong> 2,640 m</li>
-        <li><strong>Population:</strong> 7,500,000 (approx.)</li>
-        <li><strong>Average Temperature:</strong> 14°C (57°F)</li>
-        <li><strong>Main River:</strong> Río Bogotá</li>
-        <li><strong>Main Attractions:</strong> Monserrate, Museo del Oro, Plaza de Bolívar, Jardín Botánico</li>
-      </ul>
-    </section>
+  <div id="visit-message" class="visit-message"></div>
+
+  <h1>Discover Bogotá</h1>
+
+  <section class="discover-intro">
+    <h2>Welcome</h2>
+    <p>
+      Bogotá is Colombia’s lively capital, full of culture, history, and diversity. Here you can discover some fun
+      facts, impressive numbers, and must-see places!
+    </p>
+  </section>
+
+  <section class="discover-facts">
+    <h2>Interesting Facts</h2>
+    <ul>
+      <li>Bogotá is located at 2,640 meters (8,660 feet) above sea level, making it one of the highest capitals in the
+        world.</li>
+      <li>The city was founded on August 6, 1538, by Gonzalo Jiménez de Quesada.</li>
+      <li>Bogotá has over 7.5 million inhabitants, making it the largest city in Colombia.</li>
+      <li>The city boasts more than 400 km of bike paths, the largest cycle route network in Latin America.</li>
+      <li>La Candelaria historic district is famous for its cobblestone streets, colorful buildings, and lively street
+        art.</li>
+      <li>Bogotá's Gold Museum has more than 55,000 pieces of gold from the pre-Columbian era.</li>
+      <li>Each Sunday and public holiday, Bogotá's “Ciclovía” closes main roads to cars and opens them to bikes and
+        pedestrians.</li>
+    </ul>
+  </section>
+
+  <section class="discover-gallery">
+    <h2>Gallery</h2>
+    <div id="cards-container" class="cards-grid"></div>
+  </section>
+
+  <section class="discover-info">
+    <h2>Geography & More</h2>
+    <ul>
+      <li><strong>Altitude:</strong> 2,640 m</li>
+      <li><strong>Population:</strong> 7,500,000 (approx.)</li>
+      <li><strong>Average Temperature:</strong> 14°C (57°F)</li>
+      <li><strong>Main River:</strong> Río Bogotá</li>
+      <li><strong>Main Attractions:</strong> Monserrate, Museo del Oro, Plaza de Bolívar, Jardín Botánico</li>
+    </ul>
+  </section>
   </main>
   <footer>
     <p>
@@ -76,7 +78,7 @@
     </p>
   </footer>
   <div id="photoModal" class="modal"></div>
-    <div class="modal-content" id="photoModalContent"></div>
+  <div class="modal-content" id="photoModalContent"></div>
   </div>
 </body>
 

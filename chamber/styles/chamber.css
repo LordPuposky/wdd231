@@ -761,8 +761,133 @@ nav .main-nav a:focus {
     grid-template-columns: 1fr;
     gap: 0.3rem;
   }
-  
+
   .thankyou-hero h2 {
     font-size: 2rem;
+  }
+}
+
+/* Mensaje de Visita */
+.visit-message {
+  text-align: center;
+  background: #eef;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Diseño de las Tarjetas */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0.5rem 0;
+  transition: transform 0.3s;
+}
+
+.card button {
+  background: #b00028;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* === HOVER EFFECT (Desktop Only) === */
+@media (min-width: 1025px) {
+  .card img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+  }
+}
+
+/* === GRID LAYOUT USING NAMED AREAS === */
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* assign grid area names to cards (Global) */
+.card:nth-child(1) {
+  grid-area: item1;
+}
+
+.card:nth-child(2) {
+  grid-area: item2;
+}
+
+.card:nth-child(3) {
+  grid-area: item3;
+}
+
+.card:nth-child(4) {
+  grid-area: item4;
+}
+
+.card:nth-child(5) {
+  grid-area: item5;
+}
+
+.card:nth-child(6) {
+  grid-area: item6;
+}
+
+.card:nth-child(7) {
+  grid-area: item7;
+}
+
+.card:nth-child(8) {
+  grid-area: item8;
+}
+
+/* Small Screens (Mobile) - Stacked Layout */
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7"
+      "item8";
+  }
+}
+
+/* Medium Screens (Tablet) - 2 Columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+  }
+}
+
+/* Large Screens (Desktop) - 4 Columns */
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "item1 item2 item3 item4"
+      "item5 item6 item7 item8";
   }
 }

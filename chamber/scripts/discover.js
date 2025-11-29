@@ -1,78 +1,59 @@
-document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('lastmod').textContent = document.lastModified;
-    });
-    const photos = [
-      {
-        src: 'images/bogota-montserrate.webp',
-        alt: 'View from Monserrate, Bogotá',
-        title: 'Monserrate',
-        caption: 'Monserrate is one of Bogotá\'s most iconic hills, offering panoramic views of the city and a pilgrimage site since colonial times.'
-      },
-      {
-        src: 'images/bogota-goldmuseum.webp',
-        alt: 'Pre-Columbian Gold Museum',
-        title: 'Museo del Oro',
-        caption: 'The Gold Museum houses a world-renowned collection of pre-Columbian gold artifacts and is symbol of Colombia\'s ancestral culture.'
-      },
-      {
-        src: 'images/bogota-candelaria.webp',
-        alt: 'La Candelaria colorful district',
-        title: 'La Candelaria',
-        caption: 'Historic center known for its colonial buildings, street art, museums, and lively cafés—heart of Bogotá\'s cultural life.'
-      },
-      {
-        src: 'images/bogota-ciclovia.webp',
-        alt: 'Ciclovía bikes on main avenue',
-        title: 'Ciclovía',
-        caption: 'Every Sunday and holiday major roads are reserved for thousands of cyclists and pedestrians—an emblem of Bogotá’s active lifestyle.'
-      },
-      {
-        src: 'images/bogota-parks.webp',
-        alt: 'Public parks in Bogotá',
-        title: 'Parks and Green Zones',
-        caption: 'Bogotá is dotted with beautiful public parks and green spaces, perfect for socializing, sports, and family activities.'
-      },
-      {
-        src: 'images/bogota-events.webp',
-        alt: 'Street events and markets',
-        title: 'Cultural Events & Markets',
-        caption: 'From big events to street markets, Bogotá is always buzzing with culture, music, food, and uplifting communal spirit.'
-      }
-    ];
+import { places } from '../data/places.mjs';
 
-    let currentIdx = 0;
+const msToDays = 84600000;
+const theDateToday = new Date();
+const messageElement = document.getElementById("visit-message");
+const lastVisit = localStorage.getItem("lastVisit");
 
-    function renderCarouselPhoto(idx) {
-      const photoDiv = document.getElementById('carouselPhoto');
-      const photo = photos[idx];
-      photoDiv.innerHTML = `<img src="${photo.src}" alt="${photo.alt}" title="${photo.title}" style="max-width:340px; border-radius:13px; cursor:pointer;">`;
-      photoDiv.onclick = () => showPhotoModal(idx);
-    }
-    renderCarouselPhoto(currentIdx);
+if (!lastVisit) {
+  messageElement.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+  const daysDifference = Math.floor((theDateToday - new Date(parseInt(lastVisit))) / msToDays);
+  if (daysDifference < 1) {
+    messageElement.textContent = "Back so soon! Awesome!";
+  } else {
+    const dayWord = daysDifference === 1 ? "day" : "days";
+    messageElement.textContent = `You last visited ${daysDifference} ${dayWord} ago.`;
+  }
+}
+localStorage.setItem("lastVisit", Date.now());
 
-    document.getElementById('prevBtn').onclick = () => {
-      currentIdx = (currentIdx - 1 + photos.length) % photos.length;
-      renderCarouselPhoto(currentIdx);
-    };
-    document.getElementById('nextBtn').onclick = () => {
-      currentIdx = (currentIdx + 1) % photos.length;
-      renderCarouselPhoto(currentIdx);
-    };
+const cardsContainer = document.getElementById("cards-container");
 
-    function showPhotoModal(idx) {
-      const modal = document.getElementById('photoModal');
-      const content = document.getElementById('photoModalContent');
-      const photo = photos[idx];
-      content.innerHTML = `
-    <span class="close" onclick="document.getElementById('photoModal').style.display='none';">&times;</span>
-    <img src="${photo.src}" alt="${photo.alt}" style="max-width:340px; border-radius:12px; margin-bottom:1.1rem;">
-    <h3 style="margin-bottom:0.4rem;">${photo.title}</h3>
-    <p>${photo.caption}</p>
-  `;
-      modal.style.display = 'flex';
-    }
+function displayPlaces(items) {
+  cardsContainer.innerHTML = "";
+  items.forEach(place => {
+    const card = document.createElement("section");
+    card.classList.add("card");
 
-    window.onclick = function (event) {
-      const modal = document.getElementById('photoModal');
-      if (event.target == modal) { modal.style.display = "none"; }
-    };
+    const title = document.createElement("h2");
+    title.textContent = place.name;
+
+    const img = document.createElement("img");
+    img.src = place.image;
+    img.alt = place.name;
+    img.setAttribute("loading", "lazy");
+    img.width = 300;
+    img.height = 200;
+
+    const address = document.createElement("address");
+    address.textContent = place.address;
+
+    const desc = document.createElement("p");
+    desc.textContent = place.description;
+
+    const btn = document.createElement("button");
+    btn.textContent = "Learn More";
+
+    card.append(title, img, address, desc, btn);
+    cardsContainer.appendChild(card);
+  });
+}
+
+displayPlaces(places);
+
+// 3. Footer Last Modified
+document.addEventListener('DOMContentLoaded', () => {
+  const lastMod = document.getElementById('lastmod');
+  if (lastMod) lastMod.textContent = document.lastModified;
+});
