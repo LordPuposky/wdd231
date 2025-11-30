@@ -891,3 +891,9 @@ nav .main-nav a:focus {
       "item5 item6 item7 item8";
   }
 }
+
+header img {
+    height: 100px;
+    width: auto;
+    margin-right: 2rem;
+}
