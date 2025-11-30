@@ -45,6 +45,8 @@ function displayPlaces(items) {
     const btn = document.createElement("button");
     btn.textContent = "Learn More";
 
+    btn.addEventListener('click', () => showModal(place));
+
     card.append(title, img, address, desc, btn);
     cardsContainer.appendChild(card);
   });
@@ -52,7 +54,31 @@ function displayPlaces(items) {
 
 displayPlaces(places);
 
-// 3. Footer Last Modified
+const modal = document.getElementById("photoModal");
+
+const modalDetails = document.getElementById("modal-details");
+const closeModal = document.getElementById("closeModal");
+
+function showModal(place) {
+  modalDetails.innerHTML = `
+    <h2 style="color:#b00028;">${place.name}</h2>
+    <img src="${place.image}" alt="${place.name}" style="width:100%; max-width:600px; height:auto; border-radius:8px; margin: 1rem 0;">
+    <p><strong>Location:</strong> ${place.address}</p>
+    <p>${place.description}</p>
+  `;
+  modal.style.display = "flex";
+}
+if (closeModal) {
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const lastMod = document.getElementById('lastmod');
   if (lastMod) lastMod.textContent = document.lastModified;

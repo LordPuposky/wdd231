@@ -3,23 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover Bogotá - Chamber of Commerce</title>
-  <meta name="description" content="Discover facts, history, and highlights of Bogotá, the capital of Colombia.">
+  <meta name="description"
+    content="Welcome to the Bogotá Chamber of Commerce, supporting local business and community in Bogotá.">
   <meta name="author" content="Yesid Augusto Romero Ruiz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join and Bogotá Chamber of Commerce</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <meta property="og:title" content="Discover - Bogotá Chamber of Commerce">
-  <meta property="og:description" content="Explore the culture, demographics, and key places of Bogotá.">
-  <meta property="og:image" content="https://lordpuposky.github.io/wdd231/chamber/images/bogota-montserrate.webp">
-  <meta property="og:url" content="https://lordpuposky.github.io/wdd231/chamber/discover.html">
+  <meta property="og:title" content="Bogotá Chamber of Commerce">
+  <meta property="og:description"
+    content="Boost your business, connect with others, and discover opportunities at the Bogotá Chamber of Commerce.">
+  <meta property="og:image" content="https://lordpuposky.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://lordpuposky.github.io/wdd231/chamber/">
   <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/siteplan.css">
   <link rel="stylesheet" href="styles/chamber.css">
   <script type="module" src="scripts/discover.js"></script>
 </head>
+
 <body>
   <header>
     <img src="images/logo.webp" alt="Chamber logo" width="200" height="100" fetchpriority="high"
@@ -88,6 +92,12 @@
   <script>
     document.getElementById('lastmod').textContent = document.lastModified;
   </script>
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modal-details"></div>
+    </div>
+  </div>
 </body>
 
 </html>
