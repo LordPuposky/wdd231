@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Yesid Augusto Romero Ruiz" />
-    <meta name="description" content="Explore 15+ future digital banking trends dynamically loaded with JavaScript." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yesid Augusto Romero Ruiz">
+    <meta name="description" content="Explore 15+ future digital banking trends dynamically loaded with JavaScript.">
     <title>FutureBank Insights - Trends Explorer</title>
     <link rel="preload" href="styles/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="styles/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -13,7 +12,6 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
     <header>
         <div class="logo-container">
@@ -22,36 +20,36 @@
         <nav>
             <button id="menu-btn" aria-label="Open navigation menu">☰</button>
             <ul id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="trends.html">Trends Dashboard</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trends.html" class="active">Trends Dashboard</a></li>
                 <li><a href="preferences.html">Preferences & Resources</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <h1>Digital Banking Trends Explorer</h1>
             <p>Discover the financial innovations shaping the next five years.</p>
         </section>
 
-        <section class="controls">
+        <div class="controls">
             <label for="categoryFilter">Filter by Category:</label>
             <select id="categoryFilter">
                 <option value="all">All</option>
             </select>
-        </section>
+        </div>
 
-        <section id="trendsContainer" class="grid"></section>
+        <div id="trendsContainer" class="grid"></div>
     </main>
-    <!-- Modal -->
+
     <dialog id="trendModal">
         <button id="closeModal">X</button>
-        <h2 id="modalTitle"></h2>
+        <h2 id="modalTitle">Trend Details</h2>
         <p id="modalDescription"></p>
         <p><strong>Impact:</strong> <span id="modalImpact"></span></p>
         <p><strong>Timeline:</strong> <span id="modalTimeline"></span></p>
     </dialog>
+
     <footer>
         <div class="footer-content">
             <p>&copy; <span id="year"></span> FutureBank Insights</p>
@@ -64,5 +62,4 @@
     </footer>
     <script type="module" src="scripts/trends.js"></script>
 </body>
-
 </html>
