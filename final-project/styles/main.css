@@ -90,8 +90,10 @@ header {
     color: var(--accent);
     cursor: pointer;
     display: block;
-    position: relative;
-    z-index: 2000;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;
 }
 
 #nav-links {

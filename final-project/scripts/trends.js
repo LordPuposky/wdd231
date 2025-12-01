@@ -3,7 +3,6 @@
  * Meets requirements: Fetch API, Async/Await, Array Methods (.map, .filter), Template Literals.
  */
 
-import { initMenu, setFooterYear } from './main.js';
 
 // Global state to hold fetched trends
 let trendsData = [];
@@ -16,17 +15,17 @@ async function getTrends() {
     const url = 'data/trends.json';
     try {
         const response = await fetch(url);
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         trendsData = data; // Store data globally for filtering
-        
+
         displayTrends(trendsData);
         populateCategoryFilter(trendsData);
-        
+
     } catch (error) {
         console.error('Error fetching trends:', error);
         // Display a user-friendly error message in the container
@@ -113,7 +112,7 @@ function populateCategoryFilter(trends) {
 function addModalListeners() {
     const buttons = document.querySelectorAll('.details-btn');
     const modal = document.getElementById('trendModal');
-    
+
     // Elements inside the modal to update
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDescription');
@@ -146,7 +145,7 @@ function addModalListeners() {
         closeModal.addEventListener('click', () => {
             modal.close();
         });
-        
+
         // Close when clicking outside the modal
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
@@ -158,10 +157,5 @@ function addModalListeners() {
 
 // Initialize everything when the module loads
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize common layout elements from main.js
-    initMenu();
-    setFooterYear();
-    
-    // Start data fetching
     getTrends();
 });

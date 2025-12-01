@@ -3,7 +3,6 @@
  * Meets requirements: LocalStorage, Data Fetching, Event Handling.
  */
 
-import { initMenu, setFooterYear } from './main.js';
 
 const PREFS_KEY = 'futurebank_favorites';
 
@@ -99,7 +98,5 @@ function addCheckboxListeners() {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    initMenu();
-    setFooterYear();
     loadPreferencesOptions();
 });
