@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yesid Augusto Romero Ruiz">
     <meta name="description" content="User preferences, resources, and contact form for FutureBank Insights">
-    <meta property="og:title" content="FutureBank Insights - User Preferences & Resources" />
-    <meta property="og:description" content="Set your preferences, explore fintech resources, and contact us." />
-    <meta property="og:type" content="website" />
-
-    <title>FutureBank Insights - User Preferences & Resources</title>
-
+    <meta property="og:title" content="FutureBank Insights - User Preferences & Resources">
+    <meta property="og:description" content="Set your preferences, explore fintech resources, and contact us.">
+    <meta property="og:type" content="website">
+    <title>FutureBank Insights - Preferences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">FutureBank Insights</div>
+        <div class="logo-container">
+            <a href="index.html" class="logo">FutureBank Insights</a>
+        </div>
         <nav>
-            <button id="menu-btn">☰</button>
+            <button id="menu-btn" aria-label="Open navigation menu">☰</button>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="trends.html">Trends</a></li>
-                <li><a href="contact.html" class="active">Preferences & Resources</a></li>
+                <li><a href="trends.html">Trends Dashboard</a></li>
+                <li><a href="preferences.html" class="active">Preferences & Resources</a></li>
             </ul>
         </nav>
     </header>
@@ -37,23 +42,29 @@
         <!-- USER PREFERENCES SECTION -->
         <section class="preferences">
             <h2>Your Favorite Trends</h2>
-            <p>Select your preferred trends. Preferences are saved with localStorage.</p>
+            <p>Select your preferred trends below. Your choices will be saved automatically.</p>
             <ul id="favorites-list" class="favorites-list">
-                <!-- Filled dynamically with JS -->
+                <li>Loading options...</li>
             </ul>
         </section>
         <!-- RESOURCES SECTION -->
         <section class="resources">
             <h2>Fintech Learning Resources</h2>
-            <ul>
-                <li><a href="https://www.finextra.com/" target="_blank">Finextra - Global Financial Technology News</a>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;">
+                    <a href="https://www.finextra.com/" target="_blank"
+                        style="color: var(--primary); font-weight: bold;">Finextra</a> - Global Financial Technology
+                    News
                 </li>
-                <li><a href="https://www.mckinsey.com/industries/financial-services" target="_blank">McKinsey -
-                        Financial Services Insights</a></li>
-                <li><a href="https://www.weforum.org/centre-for-financial-and-monetary-systems" target="_blank">World
-                        Economic Forum - Future of Financial Systems</a></li>
-                <li><a href="https://www.gov.uk/government/publications/open-banking" target="_blank">Open Banking
-                        Standards</a></li>
+                <li style="margin-bottom: 10px;">
+                    <a href="https://www.mckinsey.com/industries/financial-services" target="_blank"
+                        style="color: var(--primary); font-weight: bold;">McKinsey</a> - Financial Services Insights
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <a href="https://www.weforum.org/centre-for-financial-and-monetary-systems" target="_blank"
+                        style="color: var(--primary); font-weight: bold;">World Economic Forum</a> - Future of Financial
+                    Systems
+                </li>
             </ul>
         </section>
         <!-- CONTACT FORM -->
@@ -63,23 +74,34 @@
             <form action="thanks.html" method="get">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" required>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                <label for="newsletter">
-                    <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to newsletter
+
+                <label for="newsletter" style="display: flex; align-items: center; gap: 10px; font-weight: normal;">
+                    <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin: 0;">
+                    Subscribe to newsletter
                 </label>
+
                 <button type="submit">Send</button>
             </form>
         </section>
     </main>
+    <!-- FOOTER ESTANDARIZADO -->
     <footer>
-        <p>&copy; <span id="year"></span> FutureBank Insights | Created by Yesid Augusto Romero Ruiz</p>
-        <a href="video.html">Project Demo Video</a>
-        <a href="attributions.html">Attributions</a>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> FutureBank Insights</p>
+            <p>Created by Yesid Augusto Romero Ruiz</p>
+            <div class="footer-links">
+                <a href="video-demo.html">Video Demo</a>
+                <a href="attributions.html">Attributions</a>
+            </div>
+        </div>
     </footer>
-    <script type="module" src="scripts/contact.js"></script>
+    <script type="module" src="scripts/preferences.js"></script>
 </body>
 
 </html>

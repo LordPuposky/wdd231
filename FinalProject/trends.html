@@ -13,10 +13,16 @@
 
 <body>
     <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">FutureBank Insights</a>
+        </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="trends.html" class="active">Trends</a>
-            <a href="contact.html">Contact</a>
+            <button id="menu-btn" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="trends.html">Trends Dashboard</a></li>
+                <li><a href="preferences.html">Preferences & Resources</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -44,8 +50,14 @@
         <p><strong>Timeline:</strong> <span id="modalTimeline"></span></p>
     </dialog>
     <footer>
-        <p>&copy; <span id="year"></span> FutureBank Insights</p>
-        <a href="video-demo.html">Video Demo</a>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> FutureBank Insights</p>
+            <p>Created by Yesid Augusto Romero Ruiz</p>
+            <div class="footer-links">
+                <a href="video-demo.html">Video Demo</a>
+                <a href="attributions.html">Attributions</a>
+            </div>
+        </div>
     </footer>
     <script type="module" src="scripts/trends.js"></script>
 </body>

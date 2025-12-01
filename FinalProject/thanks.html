@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yesid Augusto Romero Ruiz">
+    <meta name="description" content="Thank you for contacting FutureBank Insights.">
+    <title>Thank You - FutureBank Insights</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">FutureBank Insights</a>
+        </div>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trends.html">Trends Dashboard</a></li>
+                <li><a href="preferences.html">Preferences & Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Submission Received</h1>
+            <p>We appreciate your feedback and interest in the future of banking.</p>
+        </section>
+        <!-- Container for Dynamic Content -->
+        <section class="container" style="text-align: center; margin-top: 2rem;">
+            <div id="submission-results" class="trend-card" style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <!-- JavaScript will inject the form data here -->
+                <p>Loading submission details...</p>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="cta-button">Return to Home</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> FutureBank Insights</p>
+        <a href="video-demo.html">Video Demo</a>
+    </footer>
+    <script type="module" src="scripts/thanks.js"></script>
+</body>
+
+</html>

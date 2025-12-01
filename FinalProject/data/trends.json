@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "title": "AI-Driven Personalization",
+        "category": "Artificial Intelligence",
+        "description": "Banks are using hyper-personalized AI to predict customer needs before they arise, offering tailored financial advice and product recommendations in real-time.",
+        "impact": "High - Increases customer retention by 25%",
+        "timeline": "2025-2027",
+        "adoption": "Widespread",
+        "image": "ai-personalization"
+    },
+    {
+        "id": 2,
+        "title": "Biometric Authentication",
+        "category": "Security",
+        "description": "Moving beyond passwords, banks are adopting facial recognition, voice prints, and behavioral biometrics to secure transactions.",
+        "impact": "Critical - Reduces fraud by 90%",
+        "timeline": "Now - 2026",
+        "adoption": "Mainstream",
+        "image": "biometric-auth"
+    },
+    {
+        "id": 3,
+        "title": "Embedded Finance",
+        "category": "Integration",
+        "description": "Non-financial platforms (like Uber or Amazon) integrating banking services directly into their user interfaces, making payments invisible.",
+        "impact": "High - Projected $7 Trillion market",
+        "timeline": "2025-2030",
+        "adoption": "Growing",
+        "image": "embedded-finance"
+    },
+    {
+        "id": 4,
+        "title": "Open Banking APIs",
+        "category": "Regulation",
+        "description": "Regulatory frameworks forcing banks to share data with third parties via APIs, fostering a new ecosystem of financial apps.",
+        "impact": "Medium - Drivers competition",
+        "timeline": "Ongoing",
+        "adoption": "Mandatory in EU/UK",
+        "image": "open-banking"
+    },
+    {
+        "id": 5,
+        "title": "Central Bank Digital Currencies",
+        "category": "Currency",
+        "description": "Governments issuing digital versions of national currencies (CBDCs) to modernize payments and compete with cryptocurrencies.",
+        "impact": "Transformational",
+        "timeline": "2026-2030",
+        "adoption": "Pilot Phase",
+        "image": "cbdc"
+    },
+    {
+        "id": 6,
+        "title": "Green Banking & ESG",
+        "category": "Sustainability",
+        "description": "Financial products designed to support environmental sustainability, including carbon footprint tracking for every transaction.",
+        "impact": "Medium - Brand Loyalty",
+        "timeline": "2025+",
+        "adoption": "Early Majority",
+        "image": "green-banking"
+    },
+    {
+        "id": 7,
+        "title": "Quantum Computing Security",
+        "category": "Future Tech",
+        "description": "Preparing cryptographic defenses against quantum computers that could crack current encryption standards.",
+        "impact": "Critical - Future Proofing",
+        "timeline": "2028-2035",
+        "adoption": "Research Phase",
+        "image": "quantum-security"
+    },
+    {
+        "id": 8,
+        "title": "Voice Payments",
+        "category": "UX/UI",
+        "description": "Using smart speakers and voice assistants to check balances, pay bills, and transfer money securely.",
+        "impact": "Low - Convenience",
+        "timeline": "2025-2026",
+        "adoption": "Niche",
+        "image": "voice-payments"
+    },
+    {
+        "id": 9,
+        "title": "Autonomous Finance",
+        "category": "Automation",
+        "description": "Self-driving money management where algorithms automatically move funds to savings or investments to optimize returns.",
+        "impact": "High - Financial Health",
+        "timeline": "2027",
+        "adoption": "Early Adopters",
+        "image": "autonomous-finance"
+    },
+    {
+        "id": 10,
+        "title": "Blockchain Identity",
+        "category": "Security",
+        "description": "Decentralized Digital Identity (DID) allowing users to control their own KYC data without repeated verification.",
+        "impact": "High - Privacy",
+        "timeline": "2026-2029",
+        "adoption": "Emerging",
+        "image": "blockchain-id"
+    },
+    {
+        "id": 11,
+        "title": "Wearable Banking",
+        "category": "IoT",
+        "description": "Banking via smartwatches, rings, and glasses, enabling seamless contactless payments without a phone or card.",
+        "impact": "Medium - Lifestyle",
+        "timeline": "Now",
+        "adoption": "Growing",
+        "image": "wearable-banking"
+    },
+    {
+        "id": 12,
+        "title": "RegTech Automation",
+        "category": "Compliance",
+        "description": "Using AI to automate compliance with ever-changing financial regulations, reducing human error and fines.",
+        "impact": "High - Cost Saving",
+        "timeline": "2025",
+        "adoption": "Corporate",
+        "image": "regtech"
+    },
+    {
+        "id": 13,
+        "title": "Gamification of Savings",
+        "category": "UX/UI",
+        "description": "Applying game design elements to banking apps to encourage saving behavior and financial literacy among younger users.",
+        "impact": "Medium - Engagement",
+        "timeline": "Now",
+        "adoption": "Popular",
+        "image": "gamification"
+    },
+    {
+        "id": 14,
+        "title": "Buy Now, Pay Later 2.0",
+        "category": "Lending",
+        "description": "Evolution of BNPL into B2B transactions and larger purchases, integrated directly into banking apps rather than third parties.",
+        "impact": "Medium - Credit Risk",
+        "timeline": "2025-2026",
+        "adoption": "Mature",
+        "image": "bnpl"
+    },
+    {
+        "id": 15,
+        "title": "Smart Contracts",
+        "category": "Blockchain",
+        "description": "Self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code.",
+        "impact": "High - Efficiency",
+        "timeline": "2026+",
+        "adoption": "Specialized",
+        "image": "smart-contracts"
+    }
+]
