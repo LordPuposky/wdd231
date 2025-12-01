@@ -90,6 +90,12 @@ header {
     color: var(--accent);
     cursor: pointer;
     display: block;
+    position: relative;
+    z-index: 2000;
+}
+
+#nav-links {
+    z-index: 1000;
 }
 
 /* Navigation (Hide in mobile) */
