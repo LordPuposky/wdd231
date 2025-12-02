@@ -316,6 +316,11 @@ footer a {
     margin: 0 10px;
 }
 
+.footer-links a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 /* ======================================
     11. MEDIA QUERIES (Desktop)
 ======================================= */
@@ -428,4 +433,11 @@ footer a {
     font-style: normal;
     font-weight: 500;
     src: url('./fonts/inter-v20-latin-500.woff2') format('woff2');
+}
+
+#favorites-list {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
