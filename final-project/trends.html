@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yesid Augusto Romero Ruiz">
-    <meta name="description" content="Explore 15+ future digital banking trends dynamically loaded with JavaScript.">
+    <meta name="description"
+        content="Explore 15+ future digital banking trends dynamically loaded with JavaScript. Discover AI, Security, and Embedded Finance.">
+    <meta property="og:title" content="FutureBank Insights - Trends Dashboard">
+    <meta property="og:description" content="Explore dynamic banking trends and data.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lordpuposky.github.io/wdd231/final-project/trends.html">
+    <meta property="og:image" content="https://lordpuposky.github.io/wdd231/final-project/images/favicon.png">
     <title>FutureBank Insights - Trends Explorer</title>
     <link rel="preload" href="styles/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="styles/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,6 +36,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="hero">
             <h1>Digital Banking Trends Explorer</h1>
@@ -47,7 +54,7 @@
     </main>
 
     <dialog id="trendModal">
-        <button id="closeModal">X</button>
+        <button id="closeModal" aria-label="Close details">X</button>
         <h2 id="modalTitle">Trend Details</h2>
         <p id="modalDescription"></p>
         <p><strong>Impact:</strong> <span id="modalImpact"></span></p>
