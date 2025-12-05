@@ -441,3 +441,9 @@ footer a {
     flex-direction: column;
     gap: 10px;
 }
+
+.attributions-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
