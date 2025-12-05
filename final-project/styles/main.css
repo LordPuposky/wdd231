@@ -447,3 +447,23 @@ footer a {
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* Preferences (Resources List) --- */
+.resources-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources-list li {
+    margin-bottom: 10px;
+}
+
+.resources-list a {
+    color: var(--primary-color, #0043a4);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.resources-list a:hover {
+    text-decoration: underline;
+}

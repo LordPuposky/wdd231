@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yesid Augusto Romero Ruiz">
-    <meta name="description" content="User preferences, resources, and contact form for FutureBank Insights">
-    <meta property="og:title" content="FutureBank Insights - User Preferences & Resources">
-    <meta property="og:description" content="Set your preferences, explore fintech resources, and contact us.">
+    <meta name="description"
+        content="User preferences, resources, and contact form for FutureBank Insights. Customize your banking trends feed.">
+    <meta property="og:title" content="FutureBank Insights - User Preferences">
+    <meta property="og:description" content="Set your preferences and explore fintech resources.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lordpuposky.github.io/wdd231/final-project/preferences.html">
+    <meta property="og:image" content="https://lordpuposky.github.io/wdd231/final-project/images/favicon.png">
     <title>FutureBank Insights - Preferences</title>
     <link rel="preload" href="styles/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="styles/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,7 +19,6 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/main.css">
     <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/preferences.js"></script>
 </head>
 
 <body>
@@ -33,13 +35,11 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="intro">
             <h1>User Preferences & Fintech Resources</h1>
             <p>Customize your experience and explore curated learning materials about the future of digital banking.</p>
         </section>
-        <!-- USER PREFERENCES SECTION -->
         <section class="preferences">
             <h2>Your Favorite Trends</h2>
             <p>Select your preferred trends below. Your choices will be saved automatically.</p>
@@ -47,45 +47,36 @@
                 <li>Loading options...</li>
             </ul>
         </section>
-        <!-- RESOURCES SECTION -->
         <section class="resources">
             <h2>Fintech Learning Resources</h2>
-            <ul style="list-style-type: none; padding: 0;">
-                <li style="margin-bottom: 10px;">
-                    <a href="https://www.finextra.com/" target="_blank"
-                        style="color: var(--primary); font-weight: bold;">Finextra</a> - Global Financial Technology
-                    News
+            <ul class="resources-list">
+                <li>
+                    <a href="https://www.finextra.com/" target="_blank">Finextra</a> - Global Financial Technology News
                 </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="https://www.mckinsey.com/industries/financial-services" target="_blank"
-                        style="color: var(--primary); font-weight: bold;">McKinsey</a> - Financial Services Insights
+                <li>
+                    <a href="https://www.mckinsey.com/industries/financial-services" target="_blank">McKinsey</a> -
+                    Financial Services Insights
                 </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="https://www.weforum.org/centre-for-financial-and-monetary-systems" target="_blank"
-                        style="color: var(--primary); font-weight: bold;">World Economic Forum</a> - Future of Financial
-                    Systems
+                <li>
+                    <a href="https://www.weforum.org/centre-for-financial-and-monetary-systems" target="_blank">World
+                        Economic Forum</a> - Future of Financial Systems
                 </li>
             </ul>
         </section>
-        <!-- CONTACT FORM -->
         <section class="contact">
             <h2>Contact Us</h2>
             <p>Send feedback or subscribe to project updates.</p>
             <form action="thanks.html" method="get">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" required>
-
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-
                 <label for="newsletter" style="display: flex; align-items: center; gap: 10px; font-weight: normal;">
                     <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin: 0;">
                     Subscribe to newsletter
                 </label>
-
                 <button type="submit">Send</button>
             </form>
         </section>
@@ -100,6 +91,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="scripts/preferences.js"></script>
 </body>
 
 </html>
