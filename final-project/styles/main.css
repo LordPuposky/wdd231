@@ -467,3 +467,20 @@ footer a {
 .resources-list a:hover {
     text-decoration: underline;
 }
+
+.submission-container {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    /* Margen lateral para móviles */
+}
+
+.submission-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.submission-actions {
+    margin-top: 2rem;
+}
